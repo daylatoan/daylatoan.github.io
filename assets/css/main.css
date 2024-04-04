@@ -2,20 +2,63 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
-body{
-    height: 100vh;
+.banner__img{
+    width: 100%;
+}
+.header{
+   display: flex;
+}
+.header__list{
+    width: 50vw;
+    height: 50px;
+    background-color:#444444;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: aliceblue;
+    
+}
+.header__list__trangchu,
+.header__list__danhmuc,
+.header__list__lienhe,
+.header__list__donate {
+    margin-left: 40px;
+}
+.header__timkiem{
+    width: 50vw;
+    height: 50px;
+    background-color:#444444;
+    display: flex;
+    align-items: center;
+   
+}
+.header__timkiem input{
+    width: 70%;
+    height: 70%;
+    font-size: 1rem;
+}
+.header__timkiem__icon{
+    font-size: 25px;
+    padding: 2px 3px 2px 4px;
     background-color: aliceblue;
+    
+}
+.banhang__mot, .banhang__hai{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 .the{
     width: 360px;
     height: 460px;
-    background-color: rgb(255, 255, 255);
+    background-color: #EEEEEE;
     border-radius: 20px;
-    margin: 100px auto;
+    margin: 70px;
     padding: 15px;
 }
-.the__icon{
+..the__icon{
     color: darkgray;
     font-size: 25px;
 }
