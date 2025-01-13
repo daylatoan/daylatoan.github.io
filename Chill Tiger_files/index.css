@@ -1,0 +1,89 @@
+/* General Styles */
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Custom Animations */
+@keyframes customBounce {
+    30% {
+        transform: scale(1.2);
+    }
+
+    40%,
+    60% {
+        transform: rotate(-20deg) scale(1.2);
+    }
+
+    50% {
+        transform: rotate(20deg) scale(1.2);
+    }
+
+    70% {
+        transform: rotate(0deg) scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.about-logos {
+    animation: customBounce 1.5s infinite;
+}
+
+/* TADA Animation */
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  10%, 20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+.tada-animation {
+    animation: tada 1s ease infinite;
+}
+
+/* Hover Effects for SVG Paths */
+.w-full button:hover .svgg path {
+    fill: black;
+}
+
+/* Image Styles */
+img {
+    border-radius: 15px;
+}
+
+/* Responsive Image for Partner Banner */
+@media (max-width: 768px) {
+    .partner-banner {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    .partner-banner {
+        width: 75%;
+        height: auto;
+    }
+}
+
+/* Add hover effect for navbar links */
+nav a:hover {
+    color: orange; /* Changes hover color to orange */
+}
