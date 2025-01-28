@@ -1,0 +1,3809 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://www.magameme.online/ -->
+<html lang="en-US" love-deals="879BC0364EB9EBEE3DBE71B15E175613"><love-deal-csui><template shadowrootmode="open">
+		<style id="loveDealStyle">
+			.love-deal-container {
+				-webkit-user-select: none;
+				background-color: #fff;
+				border-width: 1px;
+				border-color: #e8eaec;
+				border-radius: 18px;
+				width: 320px;
+				height: 468px;
+				box-shadow: 0 0 16.8px 4.2px #7878784d
+			}
+
+			.love-deal-container.love-deal-has-active {
+				height: 518px
+			}
+
+			#love-deal-container {
+				z-index: 2147483647;
+				width: 320px;
+				height: 468px;
+				transition: all .3s;
+				position: fixed;
+				top: 50px;
+				right: 50px;
+				font-size: 16px !important
+			}
+
+			#love-deal-container.love-deal-has-active {
+				height: 518px
+			}
+
+			.love-deal-header {
+				z-index: 99;
+				box-sizing: border-box;
+				place-content: center;
+				align-items: center;
+				width: 100%;
+				height: 50px;
+				padding: 0 15px;
+				display: flex;
+				position: relative;
+				top: 0;
+				left: 0
+			}
+
+			.love-deal-logo {
+				cursor: pointer;
+				text-align: center;
+				width: 34px;
+				height: 34px;
+				font-size: 0;
+				line-height: 24;
+				display: block;
+				position: absolute;
+				top: 18px;
+				left: 20px
+			}
+
+			.love-deal-close {
+				cursor: pointer;
+				text-align: center;
+				width: 12px;
+				height: 12px;
+				font-size: 0;
+				line-height: 12;
+				display: block;
+				position: absolute;
+				top: 22px;
+				right: 30px
+			}
+
+			.love-deal-logo-img,
+			.love-deal-close-icon,
+			.love-deal-close-hover-icon {
+				width: 100%
+			}
+
+			.love-deal-close-hover-icon,
+			.love-deal-close:hover .love-deal-close-icon {
+				display: none
+			}
+
+			.love-deal-close:hover .love-deal-close-hover-icon {
+				display: block
+			}
+
+			.love-deal-coupon-logo,
+			.love-deal-coupon-num {
+				text-align: center;
+				place-content: center;
+				align-items: center;
+				height: 60px;
+				display: block
+			}
+
+			.love-deal-coupon-logo {
+				border-radius: 1000px;
+				width: 80px;
+				height: 80px;
+				margin: 0 auto;
+				text-decoration: none;
+				display: flex;
+				overflow: hidden;
+				box-shadow: 0 0 30px #7878784d
+			}
+
+			.love-deal-brand-name {
+				word-break: break-word;
+				overflow-wrap: break-word;
+				-webkit-line-clamp: 2;
+				color: #000;
+				-webkit-box-orient: vertical;
+				width: 80%;
+				text-decoration: none;
+				display: -webkit-box;
+				overflow: hidden
+			}
+
+			.love-deal-coupon-logo img {
+				width: 100%
+			}
+
+			.love-deal-coupon img {
+				height: 100%
+			}
+
+			.love-deal-coupon-num {
+				color: #000;
+				letter-spacing: 0;
+				height: 80px;
+				font-size: 22px;
+				font-style: normal;
+				font-weight: bolder;
+				line-height: 24px;
+				text-decoration: none
+			}
+
+			.love-deal-coupon-red {
+				color: #ff4b49;
+				fill: #fe564d
+			}
+
+			.love-deal-line {
+				background-color: #f0f0f0;
+				width: 90%;
+				height: 1px;
+				margin: 0 auto
+			}
+
+			.love-deal-rate {
+				height: 50px;
+				line-height: 50px
+			}
+
+			.love-deal-coupon-sm {
+				color: #000;
+				margin-left: 5%;
+				font-size: 13px
+			}
+
+			.love-deal-right {
+				float: right;
+				margin-right: 5%;
+				font-size: 13px;
+				font-weight: 700;
+				position: relative
+			}
+
+			.love-deal-m-right {
+				margin-right: 30px
+			}
+
+			.love-deal-high {
+				position: absolute;
+				top: 5px;
+				right: 0
+			}
+
+			.love-deal-coupon-box {
+				text-align: center;
+				height: 90px;
+				padding-top: 20px;
+				padding-bottom: 20px
+			}
+
+			.love-deal-coupon {
+				text-align: center;
+				background: #fb9b3617;
+				border: 1px dashed #ff817f;
+				border-radius: 11px;
+				width: 90%;
+				height: 100%;
+				margin: 0 auto;
+				padding: 0;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 20px;
+				position: relative
+			}
+
+			.love-deal-code {
+				color: #000;
+				-webkit-user-select: text;
+				font-size: 18px;
+				font-weight: 700;
+				position: absolute;
+				top: 25px;
+				left: 15px
+			}
+
+			.love-deal-worked {
+				color: #000;
+				-webkit-user-select: none;
+				font-size: 13px;
+				font-weight: 500;
+				position: absolute;
+				top: 45px;
+				left: 15px
+			}
+
+			.love-deal-success {
+				border-style: none;
+				border-color: unset;
+				text-align: center;
+				color: #fe564d;
+				letter-spacing: 0;
+				background: #ffcbc4;
+				border-radius: 27px;
+				width: 120px;
+				height: 22px;
+				padding: 0;
+				font-size: 11px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 22px;
+				position: absolute;
+				top: 7px;
+				right: 10px
+			}
+
+			.love-deal-copy {
+				cursor: pointer;
+				font-size: 16px;
+				font-weight: 700;
+				position: absolute;
+				top: 35px;
+				right: 50px
+			}
+
+			.love-deal-copied {
+				color: #000;
+				margin-right: -20px
+			}
+
+			.love-deal-more-btn {
+				border-style: none;
+				border-color: unset;
+				text-align: center;
+				color: #fff;
+				cursor: pointer;
+				background: linear-gradient(90deg, #ff986d, #ff5d80);
+				border-radius: 71px;
+				width: 90%;
+				height: 40px;
+				margin: 0 auto;
+				padding: 0;
+				font-size: 15px;
+				font-style: normal;
+				font-weight: bolder;
+				line-height: 40px;
+				text-decoration: none;
+				animation-name: shake;
+				animation-duration: 5s;
+				animation-iteration-count: infinite;
+				display: block
+			}
+
+			.love-deal-more-btn.love-deal-none {
+				animation-name: none
+			}
+
+			.love-deal-snooze {
+				color: #8e8e8e;
+				letter-spacing: 0;
+				text-align: center;
+				z-index: 10;
+				width: 100%;
+				height: 40px;
+				font-size: 12px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 40px;
+				text-decoration: underline;
+				position: relative
+			}
+
+			.love-deal-snooze span {
+				cursor: pointer
+			}
+
+			@keyframes shake {
+
+				0%,
+				to {
+					transform: translate(0, 0)
+				}
+
+				10%,
+				30%,
+				50%,
+				70%,
+				90% {
+					transform: translate(-10px)
+				}
+
+				20%,
+				40%,
+				60%,
+				80% {
+					transform: translate(10px)
+				}
+			}
+
+			.love-deal-ball {
+				cursor: pointer;
+				user-select: none;
+				pointer-events: auto;
+				z-index: 2147483647;
+				border-radius: 50%;
+				width: 48px;
+				height: 48px;
+				position: fixed;
+				box-shadow: 0 0 16.8px 4.2px #7878784d
+			}
+
+			.love-deal-ball.expanded {
+				width: 55px
+			}
+
+			.no-transition {
+				transition: none !important
+			}
+
+			.love-deal-ball-img-box {
+				position: relative
+			}
+
+			.love-deal-ball img {
+				user-select: none;
+				-webkit-user-drag: none;
+				height: 48px
+			}
+
+			.love-deal-close-container {
+				width: 0 !important;
+				height: 0 !important
+			}
+
+			.love-deal-ball-move {
+				z-index: 999;
+				cursor: ns-resize;
+				width: 12px;
+				height: 48px;
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0
+			}
+
+			.close {
+				right: -58px !important
+			}
+
+			.love-deal-active img {
+				border-bottom-right-radius: 18px;
+				border-bottom-left-radius: 18px;
+				width: 100%;
+				font-size: 0;
+				overflow: hidden
+			}
+
+			.love-apply-container {
+				height: auto !important
+			}
+
+			.love-deal-test-box {
+				user-select: none;
+				background: #00000080;
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				top: 0;
+				left: 0
+			}
+
+			.love-deal-box {
+				border-radius: 20px;
+				width: 800px;
+				height: 354px;
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				overflow: hidden;
+				transform: translate(-50%, -70%);
+				box-shadow: 0 0 10px #fcfcfc
+			}
+
+			.love-deal-box .love-deal-box-bg {
+				width: 800px;
+				height: 354px
+			}
+
+			.love-deal-box-content {
+				width: 100%;
+				height: 100%;
+				position: relative
+			}
+
+			.love-deal-box-top {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0
+			}
+
+			.love-deal-box-title {
+				text-align: center;
+				font-size: 38px;
+				font-weight: 700
+			}
+
+			.love-deal-test-list {
+				box-sizing: border-box;
+				justify-content: flex-start;
+				align-items: center;
+				width: 600px;
+				height: 110px;
+				margin: 0 auto;
+				position: relative;
+				overflow: hidden
+			}
+
+			.love-deal-test-active-box {
+				color: #f66a42;
+				z-index: 10;
+				border: 2px solid #ff5050;
+				border-radius: 1000px;
+				width: 200px;
+				height: 45px;
+				margin-top: -26px;
+				margin-left: -100px;
+				font-size: 24px;
+				line-height: 45px;
+				animation: 1s ease-in-out infinite bounce;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				box-shadow: 0 0 16px 4px #7878784d
+			}
+
+			.love-deal-test-codes {
+				box-sizing: border-box;
+				justify-content: flex-start;
+				align-items: center;
+				width: 600px;
+				margin: 40px auto;
+				transition: transform .5s;
+				display: flex;
+				position: relative
+			}
+
+			.love-deal-test-code {
+				box-sizing: border-box;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				text-align: center;
+				color: #0000;
+				background: linear-gradient(90deg, #ff9173, red);
+				-webkit-background-clip: text;
+				border-radius: 1000px;
+				align-items: center;
+				min-width: 200px;
+				padding: 0 45px;
+				font-size: 20px;
+				font-weight: 700;
+				line-height: 30px;
+				overflow: hidden
+			}
+
+			.love-deal-test-active {
+				color: #f66a42;
+				padding: 0 0 0 45px;
+				font-size: 22px
+			}
+
+			.love-deal-test-code-img {
+				vertical-align: text-top;
+				width: 38px;
+				margin-top: -3px;
+				margin-left: 10px
+			}
+
+			.love-deal-test-active .love-deal-test-code-img {
+				display: block
+			}
+
+			.love-deal-test-process {
+				background-color: #fff;
+				border: 3px solid #f66a42;
+				border-radius: 1000px;
+				width: 726px;
+				height: 26px;
+				margin: 0 auto
+			}
+
+			.love-deal-test-process-inside {
+				background: linear-gradient(90deg, #fea374, #ff678b);
+				border-radius: 1000px;
+				width: 0;
+				height: 20px;
+				margin: 3px;
+				animation-duration: 5s
+			}
+
+			.love-deal-test-process-text {
+				text-align: center;
+				color: #f66a42;
+				width: 100%;
+				margin-top: 20px;
+				font-size: 30px;
+				font-weight: 700
+			}
+
+			@keyframes bounce {
+
+				0%,
+				to {
+					transform: scale(1)
+				}
+
+				50% {
+					transform: scale(1.1)
+				}
+			}
+
+			.love-deal-box-btns {
+				text-align: center;
+				flex-wrap: nowrap;
+				justify-content: space-evenly;
+				margin: 40px;
+				display: flex
+			}
+
+			.love-deal-box-btn {
+				color: #fff;
+				cursor: pointer;
+				border-radius: 1000px;
+				width: 290px;
+				font-size: 22px;
+				font-weight: bolder;
+				line-height: 50px;
+				box-shadow: 0 0 16px 4px #7878784d
+			}
+
+			.love-deal-box-btn-0 {
+				background-color: #00b025
+			}
+
+			.love-deal-box-btn-1 {
+				background-color: #ff6200
+			}
+
+			.love-deal-best-code {
+				cursor: pointer;
+				background: linear-gradient(135deg, #fce38a33, #f38181cc);
+				width: 200px;
+				padding: 5px 60px;
+				font-size: 22px
+			}
+
+			.love-deal-best-succ {
+				vertical-align: middle;
+				width: 36px;
+				margin-left: 10px
+			}
+
+			.love-deal-csui-container {
+				display: flex;
+				position: relative;
+				top: 0;
+				left: 0
+			}
+
+			.ld-container::-webkit-scrollbar {
+				width: 4px;
+				height: 4px
+			}
+
+			.ld-container::-webkit-scrollbar-thumb {
+				background: #9996;
+				border-radius: 100px;
+				box-shadow: inset 0 0 #f0f0f080
+			}
+
+			.ld-container {
+				width: 100%;
+				height: auto
+			}
+
+			.ld-code-container,
+			.ld-brand-container {
+				background-color: #fff;
+				border-radius: 18px;
+				width: 100%
+			}
+
+			.ld-brand-container {
+				height: 165px
+			}
+
+			.ld-code-container {
+				margin-top: 15px;
+				padding-bottom: 15px
+			}
+
+			.ld-brand-name {
+				text-align: center
+			}
+
+			.ld-brand-name a {
+				color: #000;
+				text-align: center;
+				height: 45px;
+				font-size: 18px;
+				font-weight: bolder;
+				line-height: 45px;
+				text-decoration: none
+			}
+
+			.ld-coupon-red {
+				color: #f64748;
+				fill: #fe564d
+			}
+
+			.ld-coupon-num {
+				color: #000;
+				letter-spacing: 0;
+				text-align: center;
+				height: 60px;
+				margin-top: -10px;
+				font-size: 20px;
+				font-style: normal;
+				font-weight: bolder;
+				line-height: 60px;
+				text-decoration: none
+			}
+
+			.ld-line {
+				background-color: #f0f0f0;
+				width: 90%;
+				height: 1px;
+				margin: 0 auto
+			}
+
+			.ld-rate {
+				height: 50px;
+				line-height: 50px
+			}
+
+			.ld-coupon-sm {
+				margin-left: 5%;
+				font-size: 13px
+			}
+
+			.ld-right {
+				float: right;
+				margin-right: 5%;
+				font-size: 13px;
+				font-weight: 700;
+				position: relative
+			}
+
+			.ld-m-right {
+				margin-right: 30px
+			}
+
+			.ld-high {
+				position: absolute;
+				top: 5px;
+				right: 0
+			}
+
+			.ld-middle {
+				vertical-align: -6px
+			}
+
+			.ld-coupon-title {
+				text-align: center;
+				height: 40px;
+				font-size: 15px;
+				font-weight: bolder;
+				line-height: 40px
+			}
+
+			.ld-more-btn {
+				text-align: center;
+				color: #fff;
+				background: linear-gradient(90deg, #ff986d, #ff5d80);
+				border-radius: 71px;
+				width: 90%;
+				height: 40px;
+				margin: 0 auto;
+				padding: 0;
+				font-size: 15px;
+				font-style: normal;
+				font-weight: bolder;
+				line-height: 40px;
+				text-decoration: none;
+				display: block
+			}
+
+			.ld-ul {
+				margin: 0;
+				padding: 0 10px
+			}
+
+			.ld-coupon-box {
+				text-align: center;
+				height: 80px;
+				padding-bottom: 10px;
+				list-style-type: none
+			}
+
+			.ld-coupon {
+				text-align: center;
+				background: #fb9b3617;
+				border: 1px dashed #fe564d;
+				border-radius: 11px;
+				height: 100%;
+				padding: 0;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 20px;
+				position: relative
+			}
+
+			li.ld-coupon-box {
+				height: 60px
+			}
+
+			li.ld-sm-coupon.ld-coupon-box {
+				height: 40px !important
+			}
+
+			li .ld-coupon {
+				background: 0 0;
+				border-color: #9a9a9a
+			}
+
+			.ld-code {
+				-webkit-user-select: text;
+				font-size: 15px;
+				font-weight: 700;
+				position: absolute;
+				top: 20px;
+				left: 15px
+			}
+
+			.ld-worked {
+				-webkit-user-select: none;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				text-align: left;
+				width: 200px;
+				font-size: 11px;
+				font-weight: 500;
+				position: absolute;
+				top: 40px;
+				left: 15px;
+				overflow: hidden
+			}
+
+			li .ld-code {
+				top: 10px
+			}
+
+			li .ld-worked {
+				top: 30px
+			}
+
+			.ld-success {
+				border-style: none;
+				border-color: unset;
+				text-align: center;
+				color: #fe564d;
+				letter-spacing: 0;
+				background: #fcdcc4;
+				border-radius: 27px;
+				width: 100px;
+				height: 20px;
+				padding: 0;
+				font-size: 11px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 20px;
+				position: absolute;
+				top: 5px;
+				right: 5px
+			}
+
+			.ld-copy {
+				cursor: pointer;
+				user-select: none;
+				font-size: 16px;
+				font-weight: 700;
+				position: absolute;
+				top: 35px;
+				right: 30px
+			}
+
+			.ld-copied {
+				margin-right: -20px
+			}
+
+			li .ld-copy {
+				top: 20px
+			}
+
+			li.ld-sm-coupon .ld-copy {
+				top: 10px !important
+			}
+
+			li svg {
+				fill: #9a9a9a !important
+			}
+
+			.ld-logo {
+				color: #fd5700;
+				height: 35px;
+				margin-bottom: 10px;
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 35px;
+				text-decoration: none;
+				position: relative
+			}
+
+			.ld-logo img {
+				vertical-align: middle;
+				width: 35px;
+				height: 35px;
+				margin-right: 10px
+			}
+
+			.ld-no-support {
+				color: #666;
+				letter-spacing: 0;
+				text-align: left;
+				width: 65%;
+				height: 100%;
+				margin: 0;
+				padding: 10px;
+				font-size: 13px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 100%;
+				text-decoration: none;
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				left: 0
+			}
+
+			.ld-no-support-text {
+				width: 180px;
+				position: absolute;
+				top: 40px;
+				left: 105px;
+				transform: translate(-50%, -50%)
+			}
+
+			.ld-no-support-btn-box {
+				width: 35%;
+				height: 100%;
+				line-height: 100%;
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				right: 0
+			}
+
+			.ld-submit-btn {
+				border-style: none;
+				border-color: unset;
+				text-align: center;
+				cursor: pointer;
+				color: #fc1c3a;
+				background: #fccccc;
+				border-radius: 38px;
+				width: 85px;
+				height: 30px;
+				margin: 0 auto;
+				padding: 0;
+				font-size: 13px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 30px;
+				position: absolute;
+				top: 25px;
+				right: 15px
+			}
+
+			.ld-brand-container.ld-none {
+				border: 1px solid #ececec;
+				margin-top: 5px;
+				position: relative;
+				background-color: #fcecec !important;
+				height: 80px !important
+			}
+
+			.ld-coupon-title.ld-none {
+				text-align: left;
+				margin-left: 5%
+			}
+
+			.ld-coupon-shop {
+				text-align: center;
+				cursor: pointer;
+				height: 80px;
+				padding-bottom: 10px;
+				list-style-type: none
+			}
+
+			.ld-shop {
+				text-align: center;
+				border: 1px solid #e4e2e2;
+				border-radius: 11px;
+				height: 100%;
+				padding: 0;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 20px;
+				position: relative
+			}
+
+			.ld-hot {
+				background: #fff3f3
+			}
+
+			.ld-shop-logo {
+				border-radius: 1000px;
+				width: 45px;
+				height: 45px;
+				line-height: 45px;
+				position: absolute;
+				top: 17px;
+				left: 10px;
+				overflow: hidden;
+				box-shadow: 0 0 16.8px 1px #6666664d
+			}
+
+			.ld-shop-logo img {
+				width: 100%
+			}
+
+			.ld-shop-name {
+				font-size: 14px;
+				font-weight: 700;
+				position: absolute;
+				top: 20px;
+				left: 68px
+			}
+
+			.ld-shop-title {
+				color: #f64748;
+				font-size: 14px;
+				font-weight: 700;
+				position: absolute;
+				bottom: 20px;
+				left: 68px
+			}
+
+			.ld-shop-btn {
+				width: 70px;
+				height: 25px;
+				font-size: 13px;
+				font-weight: 500;
+				line-height: 25px;
+				position: absolute;
+				top: 25px;
+				right: 10px
+			}
+
+			.ld-btn-submitted {
+				color: #009671;
+				background-color: #fff;
+				border: 1px solid #009671
+			}
+
+			.ld-brand-container.ld-search {
+				background-color: #0000;
+				height: 40px;
+				margin-top: 10px;
+				position: relative
+			}
+
+			.ld-search-input {
+				color: #666;
+				border: 1px solid #fff;
+				border-radius: 18px;
+				width: 265px;
+				height: 40px;
+				padding-left: 40px;
+				font-size: 14px;
+				font-weight: 600;
+				line-height: 40px;
+				box-shadow: 0 0 10px #00285724
+			}
+
+			.ld-search-input:focus {
+				border: 1px solid #cfcfef;
+				outline: none
+			}
+
+			.ld-search-input:empty:before {
+				content: attr(placeholder);
+				color: #aaa;
+				pointer-events: none
+			}
+
+			.ld-search-input:focus:empty:before {
+				content: none
+			}
+
+			.ld-search-icon {
+				width: 18px;
+				height: 18px;
+				position: absolute;
+				top: 11px;
+				left: 14px
+			}
+
+			.ld-search-icon svg {
+				fill: #999
+			}
+
+			.ld-search-ul {
+				z-index: 100;
+				background-color: #fff;
+				border: 1px solid #efefef;
+				border-radius: 3px;
+				width: 100%;
+				height: auto;
+				padding: 3px 0;
+				position: absolute;
+				top: 28px;
+				box-shadow: 0 0 10px #00285724
+			}
+
+			.ld-search-ul li {
+				cursor: pointer;
+				padding: 3px 10px;
+				list-style-type: none
+			}
+
+			.ld-search-ul li:hover {
+				background-color: #f647481a
+			}
+
+			.ld-search-domain {
+				color: #999;
+				margin-left: 10px
+			}
+
+			.ld-highlight {
+				color: #f64748
+			}
+
+			.love-deal-more-btn {
+				border-style: none;
+				border-color: unset;
+				text-align: center;
+				color: #fff;
+				cursor: pointer;
+				background: linear-gradient(90deg, #ff986d, #ff5d80);
+				border-radius: 71px;
+				width: 90%;
+				height: 40px;
+				margin: 0 auto;
+				padding: 0;
+				font-size: 15px;
+				font-style: normal;
+				font-weight: bolder;
+				line-height: 40px;
+				text-decoration: none;
+				animation-name: shake;
+				animation-duration: 5s;
+				animation-iteration-count: infinite;
+				display: block
+			}
+
+			@keyframes shake {
+
+				0%,
+				to {
+					transform: translate(0, 0)
+				}
+
+				10%,
+				30%,
+				50%,
+				70%,
+				90% {
+					transform: translate(-10px)
+				}
+
+				20%,
+				40%,
+				60%,
+				80% {
+					transform: translate(10px)
+				}
+			}
+
+			.ld-container {
+				-webkit-user-select: none;
+				background-color: #f4f4f4;
+				border-width: 1px;
+				border-color: #e8eaec;
+				border-radius: 18px;
+				padding: 15px;
+				overflow: auto;
+				box-shadow: 0 0 16.8px 4.2px #7878784d;
+				width: 290px !important;
+				height: 468px !important
+			}
+
+			.ld-brand-container {
+				position: relative
+			}
+
+			.ld-close {
+				top: 10px !important;
+				right: 10px !important
+			}
+		</style>
+		<div id="love-deal-container" style="z-index: 2147483647;" class="love-deal-close-container">
+			<div id="love-deal-overlay-0" class="love-deal-csui-container" style="display: flex; position: absolute;">
+			</div>
+		</div>
+	</template></love-deal-csui>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title> OFFICIAL TRUMP MAGA</title>
+	<meta name="robots" content="max-image-preview:large">
+	<style>
+		img:is([sizes="auto" i], [sizes^="auto," i]) {
+			contain-intrinsic-size: 3000px 1500px
+		}
+	</style>
+	<link rel="alternate" type="application/rss+xml" title=" TRUMP MAGA » Feed" href="https://www.magameme.online/feed/">
+	<link rel="alternate" type="application/rss+xml" title=" TRUMP MAGA » Comments Feed"
+		href="https://www.magameme.online/comments/feed/">
+	<script>
+		window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/trumpjrcoinsol.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.1" } };
+		/*! This file is auto-generated */
+		!function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !n(e, "\ud83d\udc26\u200d\u2b1b", "\ud83d\udc26\u200b\u2b1b") }return !1 } function f(e, t, n) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"), a = r.getContext("2d", { willReadFrequently: !0 }), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }), a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
+	</script>
+	<link rel="stylesheet" id="premium-addons-css"
+		href="./TRUMP JR – The Official Trump Jr_files/premium-addons.min.css" media="all">
+	<style id="wp-emoji-styles-inline-css">
+		img.wp-smiley,
+		img.emoji {
+			display: inline !important;
+			border: none !important;
+			box-shadow: none !important;
+			height: 1em !important;
+			width: 1em !important;
+			margin: 0 0.07em !important;
+			vertical-align: -0.1em !important;
+			background: none !important;
+			padding: 0 !important;
+		}
+	</style>
+	<style id="global-styles-inline-css">
+		:root {
+			--wp--preset--aspect-ratio--square: 1;
+			--wp--preset--aspect-ratio--4-3: 4/3;
+			--wp--preset--aspect-ratio--3-4: 3/4;
+			--wp--preset--aspect-ratio--3-2: 3/2;
+			--wp--preset--aspect-ratio--2-3: 2/3;
+			--wp--preset--aspect-ratio--16-9: 16/9;
+			--wp--preset--aspect-ratio--9-16: 9/16;
+			--wp--preset--color--black: #000000;
+			--wp--preset--color--cyan-bluish-gray: #abb8c3;
+			--wp--preset--color--white: #ffffff;
+			--wp--preset--color--pale-pink: #f78da7;
+			--wp--preset--color--vivid-red: #cf2e2e;
+			--wp--preset--color--luminous-vivid-orange: #ff6900;
+			--wp--preset--color--luminous-vivid-amber: #fcb900;
+			--wp--preset--color--light-green-cyan: #7bdcb5;
+			--wp--preset--color--vivid-green-cyan: #00d084;
+			--wp--preset--color--pale-cyan-blue: #8ed1fc;
+			--wp--preset--color--vivid-cyan-blue: #0693e3;
+			--wp--preset--color--vivid-purple: #9b51e0;
+			--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+			--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+			--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+			--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+			--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+			--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+			--wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+			--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+			--wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+			--wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+			--wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+			--wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+			--wp--preset--font-size--small: 13px;
+			--wp--preset--font-size--medium: 20px;
+			--wp--preset--font-size--large: 36px;
+			--wp--preset--font-size--x-large: 42px;
+			--wp--preset--spacing--20: 0.44rem;
+			--wp--preset--spacing--30: 0.67rem;
+			--wp--preset--spacing--40: 1rem;
+			--wp--preset--spacing--50: 1.5rem;
+			--wp--preset--spacing--60: 2.25rem;
+			--wp--preset--spacing--70: 3.38rem;
+			--wp--preset--spacing--80: 5.06rem;
+			--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+			--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+			--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+			--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+			--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+		}
+
+		:root {
+			--wp--style--global--content-size: 800px;
+			--wp--style--global--wide-size: 1200px;
+		}
+
+		:where(body) {
+			margin: 0;
+		}
+
+		.wp-site-blocks>.alignleft {
+			float: left;
+			margin-right: 2em;
+		}
+
+		.wp-site-blocks>.alignright {
+			float: right;
+			margin-left: 2em;
+		}
+
+		.wp-site-blocks>.aligncenter {
+			justify-content: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		:where(.wp-site-blocks)>* {
+			margin-block-start: 24px;
+			margin-block-end: 0;
+		}
+
+		:where(.wp-site-blocks)> :first-child {
+			margin-block-start: 0;
+		}
+
+		:where(.wp-site-blocks)> :last-child {
+			margin-block-end: 0;
+		}
+
+		:root {
+			--wp--style--block-gap: 24px;
+		}
+
+		:root :where(.is-layout-flow)> :first-child {
+			margin-block-start: 0;
+		}
+
+		:root :where(.is-layout-flow)> :last-child {
+			margin-block-end: 0;
+		}
+
+		:root :where(.is-layout-flow)>* {
+			margin-block-start: 24px;
+			margin-block-end: 0;
+		}
+
+		:root :where(.is-layout-constrained)> :first-child {
+			margin-block-start: 0;
+		}
+
+		:root :where(.is-layout-constrained)> :last-child {
+			margin-block-end: 0;
+		}
+
+		:root :where(.is-layout-constrained)>* {
+			margin-block-start: 24px;
+			margin-block-end: 0;
+		}
+
+		:root :where(.is-layout-flex) {
+			gap: 24px;
+		}
+
+		:root :where(.is-layout-grid) {
+			gap: 24px;
+		}
+
+		.is-layout-flow>.alignleft {
+			float: left;
+			margin-inline-start: 0;
+			margin-inline-end: 2em;
+		}
+
+		.is-layout-flow>.alignright {
+			float: right;
+			margin-inline-start: 2em;
+			margin-inline-end: 0;
+		}
+
+		.is-layout-flow>.aligncenter {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		.is-layout-constrained>.alignleft {
+			float: left;
+			margin-inline-start: 0;
+			margin-inline-end: 2em;
+		}
+
+		.is-layout-constrained>.alignright {
+			float: right;
+			margin-inline-start: 2em;
+			margin-inline-end: 0;
+		}
+
+		.is-layout-constrained>.aligncenter {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		.is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+			max-width: var(--wp--style--global--content-size);
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		.is-layout-constrained>.alignwide {
+			max-width: var(--wp--style--global--wide-size);
+		}
+
+		body .is-layout-flex {
+			display: flex;
+		}
+
+		.is-layout-flex {
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		.is-layout-flex> :is(*, div) {
+			margin: 0;
+		}
+
+		body .is-layout-grid {
+			display: grid;
+		}
+
+		.is-layout-grid> :is(*, div) {
+			margin: 0;
+		}
+
+		body {
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;
+			padding-left: 0px;
+		}
+
+		a:where(:not(.wp-element-button)) {
+			text-decoration: underline;
+		}
+
+		:root :where(.wp-element-button, .wp-block-button__link) {
+			background-color: #32373c;
+			border-width: 0;
+			color: #fff;
+			font-family: inherit;
+			font-size: inherit;
+			line-height: inherit;
+			padding: calc(0.667em + 2px) calc(1.333em + 2px);
+			text-decoration: none;
+		}
+
+		.has-black-color {
+			color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-color {
+			color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-color {
+			color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-color {
+			color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-color {
+			color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-color {
+			color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-color {
+			color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-color {
+			color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-color {
+			color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-color {
+			color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-color {
+			color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-color {
+			color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-background-color {
+			background-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-background-color {
+			background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-background-color {
+			background-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-background-color {
+			background-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-background-color {
+			background-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-background-color {
+			background-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-background-color {
+			background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-background-color {
+			background-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-border-color {
+			border-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-border-color {
+			border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-border-color {
+			border-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-border-color {
+			border-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-border-color {
+			border-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-border-color {
+			border-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-border-color {
+			border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-border-color {
+			border-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+			background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+		}
+
+		.has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+			background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+		}
+
+		.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-orange-to-vivid-red-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+		}
+
+		.has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+			background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+		}
+
+		.has-cool-to-warm-spectrum-gradient-background {
+			background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+		}
+
+		.has-blush-light-purple-gradient-background {
+			background: var(--wp--preset--gradient--blush-light-purple) !important;
+		}
+
+		.has-blush-bordeaux-gradient-background {
+			background: var(--wp--preset--gradient--blush-bordeaux) !important;
+		}
+
+		.has-luminous-dusk-gradient-background {
+			background: var(--wp--preset--gradient--luminous-dusk) !important;
+		}
+
+		.has-pale-ocean-gradient-background {
+			background: var(--wp--preset--gradient--pale-ocean) !important;
+		}
+
+		.has-electric-grass-gradient-background {
+			background: var(--wp--preset--gradient--electric-grass) !important;
+		}
+
+		.has-midnight-gradient-background {
+			background: var(--wp--preset--gradient--midnight) !important;
+		}
+
+		.has-small-font-size {
+			font-size: var(--wp--preset--font-size--small) !important;
+		}
+
+		.has-medium-font-size {
+			font-size: var(--wp--preset--font-size--medium) !important;
+		}
+
+		.has-large-font-size {
+			font-size: var(--wp--preset--font-size--large) !important;
+		}
+
+		.has-x-large-font-size {
+			font-size: var(--wp--preset--font-size--x-large) !important;
+		}
+
+		:root :where(.wp-block-pullquote) {
+			font-size: 1.5em;
+			line-height: 1.6;
+		}
+	</style>
+	<link rel="stylesheet" id="eae-css-css" href="./TRUMP JR – The Official Trump Jr_files/eae.min.css" media="all">
+	<link rel="stylesheet" id="eae-peel-css-css" href="./TRUMP JR – The Official Trump Jr_files/peel.css" media="all">
+	<link rel="stylesheet" id="font-awesome-4-shim-css" href="./TRUMP JR – The Official Trump Jr_files/v4-shims.min.css"
+		media="all">
+	<link rel="stylesheet" id="font-awesome-5-all-css" href="./TRUMP JR – The Official Trump Jr_files/all.min.css"
+		media="all">
+	<link rel="stylesheet" id="vegas-css-css" href="./TRUMP JR – The Official Trump Jr_files/vegas.min.css" media="all">
+	<link rel="stylesheet" id="exad-slick-css" href="./TRUMP JR – The Official Trump Jr_files/slick.min.css"
+		media="all">
+	<link rel="stylesheet" id="exad-slick-theme-css" href="./TRUMP JR – The Official Trump Jr_files/slick-theme.min.css"
+		media="all">
+	<link rel="stylesheet" id="exad-image-hover-css" href="./TRUMP JR – The Official Trump Jr_files/imagehover.css"
+		media="all">
+	<link rel="stylesheet" id="exad-swiperv5-css" href="./TRUMP JR – The Official Trump Jr_files/swiper.min.css"
+		media="all">
+	<link rel="stylesheet" id="exad-main-style-css" href="./TRUMP JR – The Official Trump Jr_files/exad-styles.min.css"
+		media="all">
+	<link rel="stylesheet" id="pa-admin-bar-css" href="./TRUMP JR – The Official Trump Jr_files/admin-bar.css"
+		media="all">
+	<link rel="stylesheet" id="hello-elementor-css" href="./TRUMP JR – The Official Trump Jr_files/style.min.css"
+		media="all">
+	<link rel="stylesheet" id="hello-elementor-theme-style-css"
+		href="./TRUMP JR – The Official Trump Jr_files/theme.min.css" media="all">
+	<link rel="stylesheet" id="hello-elementor-header-footer-css"
+		href="./TRUMP JR – The Official Trump Jr_files/header-footer.min.css" media="all">
+	<link rel="stylesheet" id="elementor-frontend-css" href="./TRUMP JR – The Official Trump Jr_files/frontend.min.css"
+		media="all">
+	<style id="elementor-frontend-inline-css">
+		@-webkit-keyframes ha_fadeIn {
+			0% {
+				opacity: 0
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+		@keyframes ha_fadeIn {
+			0% {
+				opacity: 0
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+		@-webkit-keyframes ha_zoomIn {
+			0% {
+				opacity: 0;
+				-webkit-transform: scale3d(.3, .3, .3);
+				transform: scale3d(.3, .3, .3)
+			}
+
+			50% {
+				opacity: 1
+			}
+		}
+
+		@keyframes ha_zoomIn {
+			0% {
+				opacity: 0;
+				-webkit-transform: scale3d(.3, .3, .3);
+				transform: scale3d(.3, .3, .3)
+			}
+
+			50% {
+				opacity: 1
+			}
+		}
+
+		@-webkit-keyframes ha_rollIn {
+			0% {
+				opacity: 0;
+				-webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+				transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg)
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+		@keyframes ha_rollIn {
+			0% {
+				opacity: 0;
+				-webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+				transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg)
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+		@-webkit-keyframes ha_bounce {
+
+			0%,
+			20%,
+			53%,
+			to {
+				-webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+				animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+			}
+
+			40%,
+			43% {
+				-webkit-transform: translate3d(0, -30px, 0) scaleY(1.1);
+				transform: translate3d(0, -30px, 0) scaleY(1.1);
+				-webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+				animation-timing-function: cubic-bezier(.755, .05, .855, .06)
+			}
+
+			70% {
+				-webkit-transform: translate3d(0, -15px, 0) scaleY(1.05);
+				transform: translate3d(0, -15px, 0) scaleY(1.05);
+				-webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+				animation-timing-function: cubic-bezier(.755, .05, .855, .06)
+			}
+
+			80% {
+				-webkit-transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+				transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+				-webkit-transform: translate3d(0, 0, 0) scaleY(.95);
+				transform: translate3d(0, 0, 0) scaleY(.95)
+			}
+
+			90% {
+				-webkit-transform: translate3d(0, -4px, 0) scaleY(1.02);
+				transform: translate3d(0, -4px, 0) scaleY(1.02)
+			}
+		}
+
+		@keyframes ha_bounce {
+
+			0%,
+			20%,
+			53%,
+			to {
+				-webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+				animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+			}
+
+			40%,
+			43% {
+				-webkit-transform: translate3d(0, -30px, 0) scaleY(1.1);
+				transform: translate3d(0, -30px, 0) scaleY(1.1);
+				-webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+				animation-timing-function: cubic-bezier(.755, .05, .855, .06)
+			}
+
+			70% {
+				-webkit-transform: translate3d(0, -15px, 0) scaleY(1.05);
+				transform: translate3d(0, -15px, 0) scaleY(1.05);
+				-webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+				animation-timing-function: cubic-bezier(.755, .05, .855, .06)
+			}
+
+			80% {
+				-webkit-transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+				transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+				-webkit-transform: translate3d(0, 0, 0) scaleY(.95);
+				transform: translate3d(0, 0, 0) scaleY(.95)
+			}
+
+			90% {
+				-webkit-transform: translate3d(0, -4px, 0) scaleY(1.02);
+				transform: translate3d(0, -4px, 0) scaleY(1.02)
+			}
+		}
+
+		@-webkit-keyframes ha_bounceIn {
+
+			0%,
+			20%,
+			40%,
+			60%,
+			80%,
+			to {
+				-webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+				animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+			}
+
+			0% {
+				opacity: 0;
+				-webkit-transform: scale3d(.3, .3, .3);
+				transform: scale3d(.3, .3, .3)
+			}
+
+			20% {
+				-webkit-transform: scale3d(1.1, 1.1, 1.1);
+				transform: scale3d(1.1, 1.1, 1.1)
+			}
+
+			40% {
+				-webkit-transform: scale3d(.9, .9, .9);
+				transform: scale3d(.9, .9, .9)
+			}
+
+			60% {
+				opacity: 1;
+				-webkit-transform: scale3d(1.03, 1.03, 1.03);
+				transform: scale3d(1.03, 1.03, 1.03)
+			}
+
+			80% {
+				-webkit-transform: scale3d(.97, .97, .97);
+				transform: scale3d(.97, .97, .97)
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+		@keyframes ha_bounceIn {
+
+			0%,
+			20%,
+			40%,
+			60%,
+			80%,
+			to {
+				-webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+				animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+			}
+
+			0% {
+				opacity: 0;
+				-webkit-transform: scale3d(.3, .3, .3);
+				transform: scale3d(.3, .3, .3)
+			}
+
+			20% {
+				-webkit-transform: scale3d(1.1, 1.1, 1.1);
+				transform: scale3d(1.1, 1.1, 1.1)
+			}
+
+			40% {
+				-webkit-transform: scale3d(.9, .9, .9);
+				transform: scale3d(.9, .9, .9)
+			}
+
+			60% {
+				opacity: 1;
+				-webkit-transform: scale3d(1.03, 1.03, 1.03);
+				transform: scale3d(1.03, 1.03, 1.03)
+			}
+
+			80% {
+				-webkit-transform: scale3d(.97, .97, .97);
+				transform: scale3d(.97, .97, .97)
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+		@-webkit-keyframes ha_flipInX {
+			0% {
+				opacity: 0;
+				-webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+				transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in
+			}
+
+			40% {
+				-webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+				transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in
+			}
+
+			60% {
+				opacity: 1;
+				-webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+				transform: perspective(400px) rotate3d(1, 0, 0, 10deg)
+			}
+
+			80% {
+				-webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+				transform: perspective(400px) rotate3d(1, 0, 0, -5deg)
+			}
+		}
+
+		@keyframes ha_flipInX {
+			0% {
+				opacity: 0;
+				-webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+				transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in
+			}
+
+			40% {
+				-webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+				transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in
+			}
+
+			60% {
+				opacity: 1;
+				-webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+				transform: perspective(400px) rotate3d(1, 0, 0, 10deg)
+			}
+
+			80% {
+				-webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+				transform: perspective(400px) rotate3d(1, 0, 0, -5deg)
+			}
+		}
+
+		@-webkit-keyframes ha_flipInY {
+			0% {
+				opacity: 0;
+				-webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+				transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in
+			}
+
+			40% {
+				-webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+				transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in
+			}
+
+			60% {
+				opacity: 1;
+				-webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+				transform: perspective(400px) rotate3d(0, 1, 0, 10deg)
+			}
+
+			80% {
+				-webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+				transform: perspective(400px) rotate3d(0, 1, 0, -5deg)
+			}
+		}
+
+		@keyframes ha_flipInY {
+			0% {
+				opacity: 0;
+				-webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+				transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in
+			}
+
+			40% {
+				-webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+				transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+				-webkit-animation-timing-function: ease-in;
+				animation-timing-function: ease-in
+			}
+
+			60% {
+				opacity: 1;
+				-webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+				transform: perspective(400px) rotate3d(0, 1, 0, 10deg)
+			}
+
+			80% {
+				-webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+				transform: perspective(400px) rotate3d(0, 1, 0, -5deg)
+			}
+		}
+
+		@-webkit-keyframes ha_swing {
+			20% {
+				-webkit-transform: rotate3d(0, 0, 1, 15deg);
+				transform: rotate3d(0, 0, 1, 15deg)
+			}
+
+			40% {
+				-webkit-transform: rotate3d(0, 0, 1, -10deg);
+				transform: rotate3d(0, 0, 1, -10deg)
+			}
+
+			60% {
+				-webkit-transform: rotate3d(0, 0, 1, 5deg);
+				transform: rotate3d(0, 0, 1, 5deg)
+			}
+
+			80% {
+				-webkit-transform: rotate3d(0, 0, 1, -5deg);
+				transform: rotate3d(0, 0, 1, -5deg)
+			}
+		}
+
+		@keyframes ha_swing {
+			20% {
+				-webkit-transform: rotate3d(0, 0, 1, 15deg);
+				transform: rotate3d(0, 0, 1, 15deg)
+			}
+
+			40% {
+				-webkit-transform: rotate3d(0, 0, 1, -10deg);
+				transform: rotate3d(0, 0, 1, -10deg)
+			}
+
+			60% {
+				-webkit-transform: rotate3d(0, 0, 1, 5deg);
+				transform: rotate3d(0, 0, 1, 5deg)
+			}
+
+			80% {
+				-webkit-transform: rotate3d(0, 0, 1, -5deg);
+				transform: rotate3d(0, 0, 1, -5deg)
+			}
+		}
+
+		@-webkit-keyframes ha_slideInDown {
+			0% {
+				visibility: visible;
+				-webkit-transform: translate3d(0, -100%, 0);
+				transform: translate3d(0, -100%, 0)
+			}
+		}
+
+		@keyframes ha_slideInDown {
+			0% {
+				visibility: visible;
+				-webkit-transform: translate3d(0, -100%, 0);
+				transform: translate3d(0, -100%, 0)
+			}
+		}
+
+		@-webkit-keyframes ha_slideInUp {
+			0% {
+				visibility: visible;
+				-webkit-transform: translate3d(0, 100%, 0);
+				transform: translate3d(0, 100%, 0)
+			}
+		}
+
+		@keyframes ha_slideInUp {
+			0% {
+				visibility: visible;
+				-webkit-transform: translate3d(0, 100%, 0);
+				transform: translate3d(0, 100%, 0)
+			}
+		}
+
+		@-webkit-keyframes ha_slideInLeft {
+			0% {
+				visibility: visible;
+				-webkit-transform: translate3d(-100%, 0, 0);
+				transform: translate3d(-100%, 0, 0)
+			}
+		}
+
+		@keyframes ha_slideInLeft {
+			0% {
+				visibility: visible;
+				-webkit-transform: translate3d(-100%, 0, 0);
+				transform: translate3d(-100%, 0, 0)
+			}
+		}
+
+		@-webkit-keyframes ha_slideInRight {
+			0% {
+				visibility: visible;
+				-webkit-transform: translate3d(100%, 0, 0);
+				transform: translate3d(100%, 0, 0)
+			}
+		}
+
+		@keyframes ha_slideInRight {
+			0% {
+				visibility: visible;
+				-webkit-transform: translate3d(100%, 0, 0);
+				transform: translate3d(100%, 0, 0)
+			}
+		}
+
+		.ha_fadeIn {
+			-webkit-animation-name: ha_fadeIn;
+			animation-name: ha_fadeIn
+		}
+
+		.ha_zoomIn {
+			-webkit-animation-name: ha_zoomIn;
+			animation-name: ha_zoomIn
+		}
+
+		.ha_rollIn {
+			-webkit-animation-name: ha_rollIn;
+			animation-name: ha_rollIn
+		}
+
+		.ha_bounce {
+			-webkit-transform-origin: center bottom;
+			-ms-transform-origin: center bottom;
+			transform-origin: center bottom;
+			-webkit-animation-name: ha_bounce;
+			animation-name: ha_bounce
+		}
+
+		.ha_bounceIn {
+			-webkit-animation-name: ha_bounceIn;
+			animation-name: ha_bounceIn;
+			-webkit-animation-duration: .75s;
+			-webkit-animation-duration: calc(var(--animate-duration)*.75);
+			animation-duration: .75s;
+			animation-duration: calc(var(--animate-duration)*.75)
+		}
+
+		.ha_flipInX,
+		.ha_flipInY {
+			-webkit-animation-name: ha_flipInX;
+			animation-name: ha_flipInX;
+			-webkit-backface-visibility: visible !important;
+			backface-visibility: visible !important
+		}
+
+		.ha_flipInY {
+			-webkit-animation-name: ha_flipInY;
+			animation-name: ha_flipInY
+		}
+
+		.ha_swing {
+			-webkit-transform-origin: top center;
+			-ms-transform-origin: top center;
+			transform-origin: top center;
+			-webkit-animation-name: ha_swing;
+			animation-name: ha_swing
+		}
+
+		.ha_slideInDown {
+			-webkit-animation-name: ha_slideInDown;
+			animation-name: ha_slideInDown
+		}
+
+		.ha_slideInUp {
+			-webkit-animation-name: ha_slideInUp;
+			animation-name: ha_slideInUp
+		}
+
+		.ha_slideInLeft {
+			-webkit-animation-name: ha_slideInLeft;
+			animation-name: ha_slideInLeft
+		}
+
+		.ha_slideInRight {
+			-webkit-animation-name: ha_slideInRight;
+			animation-name: ha_slideInRight
+		}
+
+		.ha-css-transform-yes {
+			-webkit-transition-duration: var(--ha-tfx-transition-duration, .2s);
+			transition-duration: var(--ha-tfx-transition-duration, .2s);
+			-webkit-transition-property: -webkit-transform;
+			transition-property: transform;
+			transition-property: transform, -webkit-transform;
+			-webkit-transform: translate(var(--ha-tfx-translate-x, 0), var(--ha-tfx-translate-y, 0)) scale(var(--ha-tfx-scale-x, 1), var(--ha-tfx-scale-y, 1)) skew(var(--ha-tfx-skew-x, 0), var(--ha-tfx-skew-y, 0)) rotateX(var(--ha-tfx-rotate-x, 0)) rotateY(var(--ha-tfx-rotate-y, 0)) rotateZ(var(--ha-tfx-rotate-z, 0));
+			transform: translate(var(--ha-tfx-translate-x, 0), var(--ha-tfx-translate-y, 0)) scale(var(--ha-tfx-scale-x, 1), var(--ha-tfx-scale-y, 1)) skew(var(--ha-tfx-skew-x, 0), var(--ha-tfx-skew-y, 0)) rotateX(var(--ha-tfx-rotate-x, 0)) rotateY(var(--ha-tfx-rotate-y, 0)) rotateZ(var(--ha-tfx-rotate-z, 0))
+		}
+
+		.ha-css-transform-yes:hover {
+			-webkit-transform: translate(var(--ha-tfx-translate-x-hover, var(--ha-tfx-translate-x, 0)), var(--ha-tfx-translate-y-hover, var(--ha-tfx-translate-y, 0))) scale(var(--ha-tfx-scale-x-hover, var(--ha-tfx-scale-x, 1)), var(--ha-tfx-scale-y-hover, var(--ha-tfx-scale-y, 1))) skew(var(--ha-tfx-skew-x-hover, var(--ha-tfx-skew-x, 0)), var(--ha-tfx-skew-y-hover, var(--ha-tfx-skew-y, 0))) rotateX(var(--ha-tfx-rotate-x-hover, var(--ha-tfx-rotate-x, 0))) rotateY(var(--ha-tfx-rotate-y-hover, var(--ha-tfx-rotate-y, 0))) rotateZ(var(--ha-tfx-rotate-z-hover, var(--ha-tfx-rotate-z, 0)));
+			transform: translate(var(--ha-tfx-translate-x-hover, var(--ha-tfx-translate-x, 0)), var(--ha-tfx-translate-y-hover, var(--ha-tfx-translate-y, 0))) scale(var(--ha-tfx-scale-x-hover, var(--ha-tfx-scale-x, 1)), var(--ha-tfx-scale-y-hover, var(--ha-tfx-scale-y, 1))) skew(var(--ha-tfx-skew-x-hover, var(--ha-tfx-skew-x, 0)), var(--ha-tfx-skew-y-hover, var(--ha-tfx-skew-y, 0))) rotateX(var(--ha-tfx-rotate-x-hover, var(--ha-tfx-rotate-x, 0))) rotateY(var(--ha-tfx-rotate-y-hover, var(--ha-tfx-rotate-y, 0))) rotateZ(var(--ha-tfx-rotate-z-hover, var(--ha-tfx-rotate-z, 0)))
+		}
+
+		.happy-addon>.elementor-widget-container {
+			word-wrap: break-word;
+			overflow-wrap: break-word
+		}
+
+		.happy-addon>.elementor-widget-container,
+		.happy-addon>.elementor-widget-container * {
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box
+		}
+
+		.happy-addon p:empty {
+			display: none
+		}
+
+		.happy-addon .elementor-inline-editing {
+			min-height: auto !important
+		}
+
+		.happy-addon-pro img {
+			max-width: 100%;
+			height: auto;
+			-o-object-fit: cover;
+			object-fit: cover
+		}
+
+		.ha-screen-reader-text {
+			position: absolute;
+			overflow: hidden;
+			clip: rect(1px, 1px, 1px, 1px);
+			margin: -1px;
+			padding: 0;
+			width: 1px;
+			height: 1px;
+			border: 0;
+			word-wrap: normal !important;
+			-webkit-clip-path: inset(50%);
+			clip-path: inset(50%)
+		}
+
+		.ha-has-bg-overlay>.elementor-widget-container {
+			position: relative;
+			z-index: 1
+		}
+
+		.ha-has-bg-overlay>.elementor-widget-container:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			content: ""
+		}
+
+		.ha-popup--is-enabled .ha-js-popup,
+		.ha-popup--is-enabled .ha-js-popup img {
+			cursor: -webkit-zoom-in !important;
+			cursor: zoom-in !important
+		}
+
+		.mfp-wrap .mfp-arrow,
+		.mfp-wrap .mfp-close {
+			background-color: transparent
+		}
+
+		.mfp-wrap .mfp-arrow:focus,
+		.mfp-wrap .mfp-close:focus {
+			outline-width: thin
+		}
+
+		.ha-advanced-tooltip-enable {
+			position: relative;
+			cursor: pointer;
+			--ha-tooltip-arrow-color: black;
+			--ha-tooltip-arrow-distance: 0
+		}
+
+		.ha-advanced-tooltip-enable .ha-advanced-tooltip-content {
+			position: absolute;
+			z-index: 999;
+			display: none;
+			padding: 5px 0;
+			width: 120px;
+			height: auto;
+			border-radius: 6px;
+			background-color: #000;
+			color: #fff;
+			text-align: center;
+			opacity: 0
+		}
+
+		.ha-advanced-tooltip-enable .ha-advanced-tooltip-content::after {
+			position: absolute;
+			border-width: 5px;
+			border-style: solid;
+			content: ""
+		}
+
+		.ha-advanced-tooltip-enable .ha-advanced-tooltip-content.no-arrow::after {
+			visibility: hidden
+		}
+
+		.ha-advanced-tooltip-enable .ha-advanced-tooltip-content.show {
+			display: inline-block;
+			opacity: 1
+		}
+
+		.ha-advanced-tooltip-enable.ha-advanced-tooltip-top .ha-advanced-tooltip-content,
+		body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-top .ha-advanced-tooltip-content {
+			top: unset;
+			right: 0;
+			bottom: calc(101% + var(--ha-tooltip-arrow-distance));
+			left: 0;
+			margin: 0 auto
+		}
+
+		.ha-advanced-tooltip-enable.ha-advanced-tooltip-top .ha-advanced-tooltip-content::after,
+		body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-top .ha-advanced-tooltip-content::after {
+			top: 100%;
+			right: unset;
+			bottom: unset;
+			left: 50%;
+			border-color: var(--ha-tooltip-arrow-color) transparent transparent transparent;
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%)
+		}
+
+		.ha-advanced-tooltip-enable.ha-advanced-tooltip-bottom .ha-advanced-tooltip-content,
+		body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-bottom .ha-advanced-tooltip-content {
+			top: calc(101% + var(--ha-tooltip-arrow-distance));
+			right: 0;
+			bottom: unset;
+			left: 0;
+			margin: 0 auto
+		}
+
+		.ha-advanced-tooltip-enable.ha-advanced-tooltip-bottom .ha-advanced-tooltip-content::after,
+		body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-bottom .ha-advanced-tooltip-content::after {
+			top: unset;
+			right: unset;
+			bottom: 100%;
+			left: 50%;
+			border-color: transparent transparent var(--ha-tooltip-arrow-color) transparent;
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%)
+		}
+
+		.ha-advanced-tooltip-enable.ha-advanced-tooltip-left .ha-advanced-tooltip-content,
+		body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-left .ha-advanced-tooltip-content {
+			top: 50%;
+			right: calc(101% + var(--ha-tooltip-arrow-distance));
+			bottom: unset;
+			left: unset;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%)
+		}
+
+		.ha-advanced-tooltip-enable.ha-advanced-tooltip-left .ha-advanced-tooltip-content::after,
+		body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-left .ha-advanced-tooltip-content::after {
+			top: 50%;
+			right: unset;
+			bottom: unset;
+			left: 100%;
+			border-color: transparent transparent transparent var(--ha-tooltip-arrow-color);
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%)
+		}
+
+		.ha-advanced-tooltip-enable.ha-advanced-tooltip-right .ha-advanced-tooltip-content,
+		body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-right .ha-advanced-tooltip-content {
+			top: 50%;
+			right: unset;
+			bottom: unset;
+			left: calc(101% + var(--ha-tooltip-arrow-distance));
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%)
+		}
+
+		.ha-advanced-tooltip-enable.ha-advanced-tooltip-right .ha-advanced-tooltip-content::after,
+		body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-right .ha-advanced-tooltip-content::after {
+			top: 50%;
+			right: 100%;
+			bottom: unset;
+			left: unset;
+			border-color: transparent var(--ha-tooltip-arrow-color) transparent transparent;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%)
+		}
+
+		body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-top .ha-advanced-tooltip-content {
+			top: unset;
+			right: 0;
+			bottom: calc(101% + var(--ha-tooltip-arrow-distance));
+			left: 0;
+			margin: 0 auto
+		}
+
+		body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-top .ha-advanced-tooltip-content::after {
+			top: 100%;
+			right: unset;
+			bottom: unset;
+			left: 50%;
+			border-color: var(--ha-tooltip-arrow-color) transparent transparent transparent;
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%)
+		}
+
+		body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-bottom .ha-advanced-tooltip-content {
+			top: calc(101% + var(--ha-tooltip-arrow-distance));
+			right: 0;
+			bottom: unset;
+			left: 0;
+			margin: 0 auto
+		}
+
+		body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-bottom .ha-advanced-tooltip-content::after {
+			top: unset;
+			right: unset;
+			bottom: 100%;
+			left: 50%;
+			border-color: transparent transparent var(--ha-tooltip-arrow-color) transparent;
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%)
+		}
+
+		body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-left .ha-advanced-tooltip-content {
+			top: 50%;
+			right: calc(101% + var(--ha-tooltip-arrow-distance));
+			bottom: unset;
+			left: unset;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%)
+		}
+
+		body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-left .ha-advanced-tooltip-content::after {
+			top: 50%;
+			right: unset;
+			bottom: unset;
+			left: 100%;
+			border-color: transparent transparent transparent var(--ha-tooltip-arrow-color);
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%)
+		}
+
+		body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-right .ha-advanced-tooltip-content {
+			top: 50%;
+			right: unset;
+			bottom: unset;
+			left: calc(101% + var(--ha-tooltip-arrow-distance));
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%)
+		}
+
+		body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-right .ha-advanced-tooltip-content::after {
+			top: 50%;
+			right: 100%;
+			bottom: unset;
+			left: unset;
+			border-color: transparent var(--ha-tooltip-arrow-color) transparent transparent;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%)
+		}
+
+		body.elementor-editor-active .happy-addon.ha-gravityforms .gform_wrapper {
+			display: block !important
+		}
+
+		.ha-scroll-to-top-wrap.ha-scroll-to-top-hide {
+			display: none
+		}
+
+		.ha-scroll-to-top-wrap.edit-mode,
+		.ha-scroll-to-top-wrap.single-page-off {
+			display: none !important
+		}
+
+		.ha-scroll-to-top-button {
+			position: fixed;
+			right: 15px;
+			bottom: 15px;
+			z-index: 9999;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+			-ms-flex-align: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			width: 50px;
+			height: 50px;
+			border-radius: 50px;
+			background-color: #5636d1;
+			color: #fff;
+			text-align: center;
+			opacity: 1;
+			cursor: pointer;
+			-webkit-transition: all .3s;
+			transition: all .3s
+		}
+
+		.ha-scroll-to-top-button i {
+			color: #fff;
+			font-size: 16px
+		}
+
+		.ha-scroll-to-top-button:hover {
+			background-color: #e2498a
+		}
+	</style>
+	<link rel="stylesheet" id="elementor-post-8-css" href="./TRUMP JR – The Official Trump Jr_files/post-8.css"
+		media="all">
+	<link rel="stylesheet" id="widget-image-css" href="./TRUMP JR – The Official Trump Jr_files/widget-image.min.css"
+		media="all">
+	<link rel="stylesheet" id="widget-text-editor-css"
+		href="./TRUMP JR – The Official Trump Jr_files/widget-text-editor.min.css" media="all">
+	<link rel="stylesheet" id="widget-icon-list-css"
+		href="./TRUMP JR – The Official Trump Jr_files/widget-icon-list.min.css" media="all">
+	<link rel="stylesheet" id="widget-heading-css"
+		href="./TRUMP JR – The Official Trump Jr_files/widget-heading.min.css" media="all">
+	<link rel="stylesheet" id="widget-spacer-css" href="./TRUMP JR – The Official Trump Jr_files/widget-spacer.min.css"
+		media="all">
+	<link rel="stylesheet" id="widget-social-icons-css"
+		href="./TRUMP JR – The Official Trump Jr_files/widget-social-icons.min.css" media="all">
+	<link rel="stylesheet" id="e-apple-webkit-css" href="./TRUMP JR – The Official Trump Jr_files/apple-webkit.min.css"
+		media="all">
+	<link rel="stylesheet" id="elementor-post-9-css" href="./TRUMP JR – The Official Trump Jr_files/post-9.css"
+		media="all">
+	<link rel="stylesheet" id="ekit-widget-styles-css" href="./TRUMP JR – The Official Trump Jr_files/widget-styles.css"
+		media="all">
+	<link rel="stylesheet" id="ekit-responsive-css" href="./TRUMP JR – The Official Trump Jr_files/responsive.css"
+		media="all">
+	<link rel="stylesheet" id="eael-general-css" href="./TRUMP JR – The Official Trump Jr_files/general.min.css"
+		media="all">
+	<link rel="stylesheet" id="happy-icons-css" href="./TRUMP JR – The Official Trump Jr_files/style(1).min.css"
+		media="all">
+	<link rel="stylesheet" id="font-awesome-css" href="./TRUMP JR – The Official Trump Jr_files/font-awesome.min.css"
+		media="all">
+	<link rel="stylesheet" id="google-fonts-1-css" href="./TRUMP JR – The Official Trump Jr_files/css" media="all">
+	<link rel="stylesheet" id="elementor-icons-shared-4-css"
+		href="./TRUMP JR – The Official Trump Jr_files/huge-icons.min.css" media="all">
+	<link rel="stylesheet" id="elementor-icons-huge-icons-css"
+		href="./TRUMP JR – The Official Trump Jr_files/huge-icons.min.css" media="all">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+	<script src="./TRUMP JR – The Official Trump Jr_files/jquery.min.js.download" id="jquery-core-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/jquery-migrate.min.js.download"
+		id="jquery-migrate-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/iconHelper.js.download" id="eae-iconHelper-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/purify.min.js.download" id="dom-purify-js"></script>
+	<link rel="https://api.w.org/" href="https://www.magameme.online/wp-json/">
+	<link rel="alternate" title="JSON" type="application/json" href="https://www.magameme.online/wp-json/wp/v2/pages/9">
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.magameme.online/xmlrpc.php?rsd">
+	<meta name="generator" content="WordPress 6.7.1">
+	<link rel="canonical" href="https://www.magameme.online/">
+	<link rel="shortlink" href="https://www.magameme.online/">
+	<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
+		href="https://www.magameme.online/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftrumpjrcoinsol.com%2F">
+	<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
+		href="https://www.magameme.online/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftrumpjrcoinsol.com%2F&amp;format=xml">
+	<meta name="generator"
+		content="Elementor 3.26.5; features: e_font_icon_svg, additional_custom_breakpoints, e_element_cache; settings: css_print_method-external, google_font-enabled, font_display-swap">
+	<style>
+		.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+		.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+			background-image: none !important;
+		}
+
+		@media screen and (max-height: 1024px) {
+
+			.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+			.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+				background-image: none !important;
+			}
+		}
+
+		@media screen and (max-height: 640px) {
+
+			.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+			.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+				background-image: none !important;
+			}
+		}
+	</style>
+	<link rel="icon"
+		href="./TRUMP JR – The Official Trump Jr_files/AVT (32).png"
+		sizes="32x32">
+	<link rel="icon"
+		href="./TRUMP JR – The Official Trump Jr_files/AVT (32).png"
+		sizes="192x192">
+	<link rel="apple-touch-icon"
+		href="./TRUMP JR – The Official Trump Jr_files/AVT (32).png">
+	<meta name="msapplication-TileImage"
+		content="./TRUMP JR – The Official Trump Jr_files/AVT (32).png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<script src="./TRUMP JR – The Official Trump Jr_files/wp-emoji-release.min.js.download" defer=""></script>
+</head>
+
+<body
+	class="home page-template page-template-elementor_canvas page page-id-9 wp-embed-responsive exclusive-addons-elementor elementor-default elementor-template-canvas elementor-kit-8 elementor-page elementor-page-9 e--ua-blink e--ua-chrome e--ua-webkit"
+	data-elementor-device-mode="desktop">
+	<div data-elementor-type="wp-post" data-elementor-id="9" class="elementor elementor-9"
+		data-elementor-settings="{&quot;ha_cmc_init_switcher&quot;:&quot;no&quot;}" data-elementor-post-type="page">
+		<section
+			class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-a59d40d elementor-section-full_width elementor-section-height-default elementor-section-height-default exad-glass-effect-no exad-sticky-section-no"
+			data-id="a59d40d" data-element_type="section"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4333b69 exad-glass-effect-no exad-sticky-section-no"
+					data-id="4333b69" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<section
+							class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-a941243 elementor-section-full_width elementor-section-height-default elementor-section-height-default exad-glass-effect-no exad-sticky-section-no"
+							data-id="a941243" data-element_type="section"
+							data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="has_eae_slider elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-c4a5818 exad-glass-effect-no exad-sticky-section-no"
+									data-id="c4a5818" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<section
+											class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-096b5d7 elementor-section-full_width elementor-section-height-default elementor-section-height-default exad-glass-effect-no exad-sticky-section-no"
+											data-id="096b5d7" data-element_type="section"
+											data-settings="{&quot;_ha_eqh_enable&quot;:false}">
+											<div class="elementor-container elementor-column-gap-default">
+												<div class="has_eae_slider elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-10f1b01 exad-glass-effect-no exad-sticky-section-no"
+													data-id="10f1b01" data-element_type="column">
+													<div class="elementor-widget-wrap elementor-element-populated">
+														<div class="elementor-element elementor-element-f620d1d exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-image"
+															data-id="f620d1d" data-element_type="widget"
+															data-widget_type="image.default">
+															<div class="elementor-widget-container">
+																<img fetchpriority="high" decoding="async" width="775"
+																	height="1024"
+																	src="./TRUMP JR – The Official Trump Jr_files/AVT (32).png"
+																	class="attachment-large size-large wp-image-24"
+																	alt=""
+																	sizes="(max-width: 775px) 100vw, 775px">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="has_eae_slider elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-2f6eccf exad-glass-effect-no exad-sticky-section-no"
+													data-id="2f6eccf" data-element_type="column">
+													<div class="elementor-widget-wrap elementor-element-populated">
+														<div class="elementor-element elementor-element-553f431 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-ekit-nav-menu"
+															data-id="553f431" data-element_type="widget"
+															data-widget_type="ekit-nav-menu.default">
+															<div class="elementor-widget-container">
+																<nav class="ekit-wid-con ekit_menu_responsive_tablet"
+																	data-hamburger-icon=""
+																	data-hamburger-icon-type="icon"
+																	data-responsive-breakpoint="1024">
+																	<button
+																		class="elementskit-menu-hamburger elementskit-menu-toggler"
+																		type="button" aria-label="hamburger-icon">
+																		<span
+																			class="elementskit-menu-hamburger-icon"></span><span
+																			class="elementskit-menu-hamburger-icon"></span><span
+																			class="elementskit-menu-hamburger-icon"></span>
+																	</button>
+																	<div id="ekit-megamenu-main-menu"
+																		class="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover"
+																		ekit-dom-added="yes">
+																		<ul id="menu-main-menu"
+																			class="elementskit-navbar-nav elementskit-menu-po-center submenu-click-on-icon">
+																			<li id="menu-item-43"
+																				class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-9 current_page_item menu-item-43 nav-item elementskit-mobile-builder-content active"
+																				data-vertical-menu="750px"><a
+																					href="https://www.magameme.online/"
+																					class="ekit-menu-nav-link active">Home</a>
+																			</li>
+																			<li id="menu-item-44"
+																				class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44 nav-item elementskit-mobile-builder-content"
+																				data-vertical-menu="750px"><a
+																					href="https://www.magameme.online/"
+																					class="ekit-menu-nav-link">About</a>
+																			</li>
+																			<li id="menu-item-45"
+																				class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45 nav-item elementskit-mobile-builder-content"
+																				data-vertical-menu="750px"><a
+																					href="https://www.magameme.online/"
+																					class="ekit-menu-nav-link">Tokenomics</a>
+																			</li>
+																			<li id="menu-item-162"
+																				class="menu-item menu-item-type-custom menu-item-object-custom menu-item-162 nav-item elementskit-mobile-builder-content"
+																				data-vertical-menu="750px"><a
+																					href="https://www.magameme.online/"
+																					class="ekit-menu-nav-link">Contract
+																					Address</a></li>
+																			<li id="menu-item-163"
+																				class="menu-item menu-item-type-custom menu-item-object-custom menu-item-163 nav-item elementskit-mobile-builder-content"
+																				data-vertical-menu="750px"><a
+																					href="https://www.magameme.online/"
+																					class="ekit-menu-nav-link">Community</a>
+																			</li>
+																		</ul>
+																		<div class="elementskit-nav-identity-panel">
+																			<button
+																				class="elementskit-menu-close elementskit-menu-toggler"
+																				type="button">X</button></div>
+																	</div>
+																	<div
+																		class="elementskit-menu-overlay elementskit-menu-offcanvas-elements elementskit-menu-toggler ekit-nav-menu--overlay">
+																	</div>
+																</nav>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="has_eae_slider elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-129db6a elementor-hidden-mobile exad-glass-effect-no exad-sticky-section-no"
+													data-id="129db6a" data-element_type="column">
+													<div class="elementor-widget-wrap elementor-element-populated">
+														<div class="elementor-element elementor-element-8e4cce5 elementor-align-center exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-button"
+															data-id="8e4cce5" data-element_type="widget"
+															data-widget_type="button.default">
+															<div class="elementor-widget-container">
+																<div class="elementor-button-wrapper">
+																	<a class="elementor-button elementor-button-link elementor-size-sm"
+																		href="#D"
+																		target="_blank">
+																		<span class="elementor-button-content-wrapper">
+																			<span class="elementor-button-text">BUY
+																				NOW</span>
+																		</span>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+										<section
+											class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-8731210 elementor-section-full_width elementor-section-height-default elementor-section-height-default exad-glass-effect-no exad-sticky-section-no"
+											data-id="8731210" data-element_type="section"
+											data-settings="{&quot;_ha_eqh_enable&quot;:false}">
+											<div class="elementor-container elementor-column-gap-default">
+												<div class="has_eae_slider elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-b3ea1dd exad-glass-effect-no exad-sticky-section-no"
+													data-id="b3ea1dd" data-element_type="column">
+													<div class="elementor-widget-wrap elementor-element-populated">
+														<div class="elementor-element elementor-element-0a78c83 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-elementskit-heading"
+															data-id="0a78c83" data-element_type="widget"
+															data-widget_type="elementskit-heading.default">
+															<div class="elementor-widget-container">
+																<div class="ekit-wid-con">
+																	<div
+																		class="ekit-heading elementskit-section-title-wraper text_left   ekit_heading_tablet-   ekit_heading_mobile-">
+																		<h2
+																			class="ekit-heading--title elementskit-section-title ">
+																			<span><span>TRUMP MAGA</span></span> OFFCIAL
+																		</h2>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-9f2f73b exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-text-editor"
+															data-id="9f2f73b" data-element_type="widget"
+															data-widget_type="text-editor.default">
+															<div class="elementor-widget-container">
+																<p>The Official TRUMP MAGA. Meme Coin<br>$MAGA is now
+																	live on Solana!</p>
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-789c473 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-ucaddon_copy_coupon_code"
+															data-id="789c473" data-element_type="widget"
+															data-widget_type="ucaddon_copy_coupon_code.default">
+															<div class="elementor-widget-container">
+
+																<!-- start Copy Coupon Code -->
+																<style>
+																	/* widget: Copy Coupon Code */
+
+																	#uc_copy_coupon_code_elementor_789c473 {
+																		display: inline-block;
+																		text-align: center;
+																		cursor: pointer;
+																	}
+
+																	#uc_copy_coupon_code_elementor_789c473 .click-to-copy__text {
+																		display: inline-block;
+																	}
+
+																	#uc_copy_coupon_code_elementor_789c473 .copy_succes {
+																		display: none;
+																	}
+
+																	#uc_copy_coupon_code_elementor_789c473.uc-is-copied .click-to-copy__text {
+																		display: none;
+																	}
+
+																	#uc_copy_coupon_code_elementor_789c473.uc-is-copied .copy_succes {
+																		display: inline-block;
+																	}
+
+																	#uc_copy_coupon_code_elementor_789c473 .ue-icon {
+																		display: inline-block;
+																		font-size: inherit;
+
+																	}
+
+																	#uc_copy_coupon_code_elementor_789c473 .ue-icon svg {
+																		width: 1em;
+																		height: 1em;
+																	}
+																</style>
+
+																<div class="ue_coupon_code">
+
+																	<span id="uc_copy_coupon_code_elementor_789c473"
+																		class="click-to-copy none" data-link-type="no">
+
+																		<div class="click-to-copy__input-wrapper "
+																			style="overflow:hidden;opacity:0;position:absolute;z-index:-1;top:0px;left:0px;">
+																			<input class="click-to-copy__input"
+																				value="UPDATE">
+																		</div>
+
+																		<span class="click-to-copy__text "><span
+																				class="ue-icon"><i
+																					class="fas fa-copy"></i></span>
+																			UPDATE</span>
+																		<span class="copy_succes"
+																			style="color:#ffffff;">
+
+
+
+																			Copied!
+
+
+
+																		</span>
+																	</span>
+																</div>
+																<!-- end Copy Coupon Code -->
+															</div>
+														</div>
+														<section
+															class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-c032ea0 elementor-section-boxed elementor-section-height-default elementor-section-height-default exad-glass-effect-no exad-sticky-section-no"
+															data-id="c032ea0" data-element_type="section"
+															data-settings="{&quot;_ha_eqh_enable&quot;:false}">
+															<div
+																class="elementor-container elementor-column-gap-default">
+																<div class="has_eae_slider elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-74bff03 exad-glass-effect-no exad-sticky-section-no"
+																	data-id="74bff03" data-element_type="column">
+																	<div
+																		class="elementor-widget-wrap elementor-element-populated">
+																		<div class="elementor-element elementor-element-184a62e exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-button"
+																			data-id="184a62e" data-element_type="widget"
+																			data-widget_type="button.default">
+																			<div class="elementor-widget-container">
+																				<div class="elementor-button-wrapper">
+																					<a class="elementor-button elementor-button-link elementor-size-sm"
+																						href="#D"
+																						target="_blank">
+																						<span
+																							class="elementor-button-content-wrapper">
+																							<span
+																								class="elementor-button-text">BUY
+																								NOW</span>
+																						</span>
+																					</a>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="has_eae_slider elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-eca245d exad-glass-effect-no exad-sticky-section-no"
+																	data-id="eca245d" data-element_type="column">
+																	<div
+																		class="elementor-widget-wrap elementor-element-populated">
+																		<div class="elementor-element elementor-element-ddbec67 elementor-mobile-align-right exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-button"
+																			data-id="ddbec67" data-element_type="widget"
+																			data-widget_type="button.default">
+																			<div class="elementor-widget-container">
+																				<div class="elementor-button-wrapper">
+																					<a class="elementor-button elementor-button-link elementor-size-sm"
+																						href="#D"
+																						target="_blank">
+																						<span
+																							class="elementor-button-content-wrapper">
+																							<span
+																								class="elementor-button-text">LIVE
+																								CHART</span>
+																						</span>
+																					</a>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</section>
+													</div>
+												</div>
+												<div class="has_eae_slider elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7f5fcee exad-glass-effect-no exad-sticky-section-no"
+													data-id="7f5fcee" data-element_type="column">
+													<div class="elementor-widget-wrap elementor-element-populated">
+														<div class="elementor-element elementor-element-f4ac978 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-image"
+															data-id="f4ac978" data-element_type="widget"
+															data-widget_type="image.default">
+															<div class="elementor-widget-container">
+																<img decoding="async" width="800" height="639"
+																	src="./TRUMP JR – The Official Trump Jr_files/AVT__32_-removebg-preview.png"
+																	class="attachment-large size-large wp-image-29"
+																	alt=""
+																	sizes="(max-width: 800px) 100vw, 800px">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section
+							class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-7c8b766 elementor-section-full_width elementor-section-height-default elementor-section-height-default exad-glass-effect-no exad-sticky-section-no"
+							data-id="7c8b766" data-element_type="section" id="about"
+							data-settings="{&quot;_ha_eqh_enable&quot;:false}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="has_eae_slider elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-b7e39c9 exad-glass-effect-no exad-sticky-section-no"
+									data-id="b7e39c9" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-0d9b269 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-elementskit-heading"
+											data-id="0d9b269" data-element_type="widget"
+											data-widget_type="elementskit-heading.default">
+											<div class="elementor-widget-container">
+												<div class="ekit-wid-con">
+													<div
+														class="ekit-heading elementskit-section-title-wraper text_center   ekit_heading_tablet-   ekit_heading_mobile-">
+														<h2 class="ekit-heading--title elementskit-section-title ">ABOUT
+															<span><span>TRUMP MAGA</span></span></h2>
+													</div>
+												</div>
+											</div>
+										</div>
+										<section
+											class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-169195b elementor-section-full_width elementor-section-height-default elementor-section-height-default exad-glass-effect-no exad-sticky-section-no"
+											data-id="169195b" data-element_type="section"
+											data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
+											<div class="elementor-background-overlay"></div>
+											<div class="elementor-container elementor-column-gap-default">
+												<div class="has_eae_slider elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-1418eec exad-glass-effect-no exad-sticky-section-no"
+													data-id="1418eec" data-element_type="column">
+													<div class="elementor-widget-wrap elementor-element-populated">
+														<div class="elementor-element elementor-element-ac2a74b exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-image"
+															data-id="ac2a74b" data-element_type="widget"
+															data-widget_type="image.default">
+															<div class="elementor-widget-container">
+																<img fetchpriority="high" decoding="async" width="775"
+																	height="1024"
+																	src="./TRUMP JR – The Official Trump Jr_files/Giff.gif"
+																	class="attachment-large size-large wp-image-24"
+																	alt=""
+																	sizes="(max-width: 775px) 100vw, 775px">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="has_eae_slider elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-cb82808 exad-glass-effect-no exad-sticky-section-no"
+													data-id="cb82808" data-element_type="column">
+													<div class="elementor-widget-wrap elementor-element-populated">
+														<div class="elementor-element elementor-element-e6c3a9e exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-text-editor"
+															data-id="e6c3a9e" data-element_type="widget"
+															data-widget_type="text-editor.default">
+															<div class="elementor-widget-container">
+																
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-9c8db06 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-text-editor"
+															data-id="9c8db06" data-element_type="widget"
+															data-widget_type="text-editor.default">
+															<div class="elementor-widget-container">
+																<p>$MAGA Let's support Trump to bring America back to a new peak</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section
+							class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-b983d97 elementor-section-full_width elementor-section-height-default elementor-section-height-default exad-glass-effect-no exad-sticky-section-no"
+							data-id="b983d97" data-element_type="section" id="token"
+							data-settings="{&quot;_ha_eqh_enable&quot;:false}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="has_eae_slider elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-5d0d87f exad-glass-effect-no exad-sticky-section-no"
+									data-id="5d0d87f" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-e8a20bb exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-elementskit-heading"
+											data-id="e8a20bb" data-element_type="widget"
+											data-widget_type="elementskit-heading.default">
+											<div class="elementor-widget-container">
+												<div class="ekit-wid-con">
+													<div
+														class="ekit-heading elementskit-section-title-wraper text_center   ekit_heading_tablet-   ekit_heading_mobile-">
+														<h2 class="ekit-heading--title elementskit-section-title ">
+															TOKENOMICS <span><span>TRUMP MAGA</span></span></h2>
+													</div>
+												</div>
+											</div>
+										</div>
+										<section
+											class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-fb7729c elementor-section-boxed elementor-section-height-default elementor-section-height-default exad-glass-effect-no exad-sticky-section-no"
+											data-id="fb7729c" data-element_type="section"
+											data-settings="{&quot;_ha_eqh_enable&quot;:false}">
+											<div class="elementor-container elementor-column-gap-default">
+												<div class="has_eae_slider elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-4898ac9 exad-glass-effect-no exad-sticky-section-no"
+													data-id="4898ac9" data-element_type="column">
+													<div class="elementor-widget-wrap elementor-element-populated">
+														<div class="elementor-element elementor-element-11a20f9 elementor-icon-list--layout-inline elementor-align-center elementor-list-item-link-full_width exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-icon-list"
+															data-id="11a20f9" data-element_type="widget"
+															data-widget_type="icon-list.default">
+															<div class="elementor-widget-container">
+																<ul
+																	class="elementor-icon-list-items elementor-inline-items">
+																	<li
+																		class="elementor-icon-list-item elementor-inline-item">
+																		<span class="elementor-icon-list-icon">
+																			<svg aria-hidden="true"
+																				class="e-font-icon-svg e-fas-coins"
+																				viewBox="0 0 512 512"
+																				xmlns="http://www.w3.org/2000/svg">
+																				<path
+																					d="M0 405.3V448c0 35.3 86 64 192 64s192-28.7 192-64v-42.7C342.7 434.4 267.2 448 192 448S41.3 434.4 0 405.3zM320 128c106 0 192-28.7 192-64S426 0 320 0 128 28.7 128 64s86 64 192 64zM0 300.4V352c0 35.3 86 64 192 64s192-28.7 192-64v-51.6c-41.3 34-116.9 51.6-192 51.6S41.3 334.4 0 300.4zm416 11c57.3-11.1 96-31.7 96-55.4v-42.7c-23.2 16.4-57.3 27.6-96 34.5v63.6zM192 160C86 160 0 195.8 0 240s86 80 192 80 192-35.8 192-80-86-80-192-80zm219.3 56.3c60-10.8 100.7-32 100.7-56.3v-42.7c-35.5 25.1-96.5 38.6-160.7 41.8 29.5 14.3 51.2 33.5 60 57.2z">
+																				</path>
+																			</svg> </span>
+																		<span class="elementor-icon-list-text">TOTAL
+																			SUPPLY: 1,000,000,000</span>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+										<section
+											class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-c9c9486 elementor-section-full_width elementor-section-height-default elementor-section-height-default exad-glass-effect-no exad-sticky-section-no"
+											data-id="c9c9486" data-element_type="section"
+											data-settings="{&quot;_ha_eqh_enable&quot;:false}">
+											<div class="elementor-container elementor-column-gap-default">
+												<div class="has_eae_slider elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-721dc54 exad-glass-effect-no exad-sticky-section-no"
+													data-id="721dc54" data-element_type="column"
+													data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+													<div class="elementor-widget-wrap elementor-element-populated">
+														<div class="elementor-background-overlay"></div>
+														<div class="elementor-element elementor-element-8069302 elementor-widget__width-auto elementor-view-default exad-sticky-section-no exad-glass-effect-no ha-has-bg-overlay elementor-widget elementor-widget-icon"
+															data-id="8069302" data-element_type="widget"
+															data-widget_type="icon.default">
+															<div class="elementor-widget-container">
+																<div class="elementor-icon-wrapper">
+																	<div class="elementor-icon">
+																		<img src="./TRUMP JR – The Official Trump Jr_files/LOGO (24).png" alt="">
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-6406316 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-heading"
+															data-id="6406316" data-element_type="widget"
+															data-widget_type="heading.default">
+															<div class="elementor-widget-container">
+																<h2
+																	class="elementor-heading-title elementor-size-default">
+																	SYMBOL</h2>
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-c8f0530 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-heading"
+															data-id="c8f0530" data-element_type="widget"
+															data-widget_type="heading.default">
+															<div class="elementor-widget-container">
+																<h2
+																	class="elementor-heading-title elementor-size-default">
+																	$MAGA</h2>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="has_eae_slider elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-a1f7249 exad-glass-effect-no exad-sticky-section-no"
+													data-id="a1f7249" data-element_type="column">
+													<div class="elementor-widget-wrap elementor-element-populated">
+														<div class="elementor-element elementor-element-f78dc77 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-spacer"
+															data-id="f78dc77" data-element_type="widget"
+															data-widget_type="spacer.default">
+															<div class="elementor-widget-container">
+																<div class="elementor-spacer">
+																	<div class="elementor-spacer-inner"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="has_eae_slider elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-8936104 exad-glass-effect-no exad-sticky-section-no"
+													data-id="8936104" data-element_type="column"
+													data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+													<div class="elementor-widget-wrap elementor-element-populated">
+														<div class="elementor-background-overlay"></div>
+														<div class="elementor-element elementor-element-1369e9d elementor-widget__width-auto elementor-view-default exad-sticky-section-no exad-glass-effect-no ha-has-bg-overlay elementor-widget elementor-widget-icon"
+															data-id="1369e9d" data-element_type="widget"
+															data-widget_type="icon.default">
+															<div class="elementor-widget-container">
+																<div class="elementor-icon-wrapper">
+																	<div class="elementor-icon">
+																		<img src="./TRUMP JR – The Official Trump Jr_files/LOGO (24).png" alt="">
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-62cf8c9 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-heading"
+															data-id="62cf8c9" data-element_type="widget"
+															data-widget_type="heading.default">
+															<div class="elementor-widget-container">
+																<h2
+																	class="elementor-heading-title elementor-size-default">
+																	LIQUIDITY</h2>
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-3ee3dc2 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-heading"
+															data-id="3ee3dc2" data-element_type="widget"
+															data-widget_type="heading.default">
+															<div class="elementor-widget-container">
+																<h2
+																	class="elementor-heading-title elementor-size-default">
+																	BURNED</h2>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="has_eae_slider elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-d80a758 exad-glass-effect-no exad-sticky-section-no"
+													data-id="d80a758" data-element_type="column">
+													<div class="elementor-widget-wrap elementor-element-populated">
+														<div class="elementor-element elementor-element-7ea608d exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-spacer"
+															data-id="7ea608d" data-element_type="widget"
+															data-widget_type="spacer.default">
+															<div class="elementor-widget-container">
+																<div class="elementor-spacer">
+																	<div class="elementor-spacer-inner"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="has_eae_slider elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-55bac81 exad-glass-effect-no exad-sticky-section-no"
+													data-id="55bac81" data-element_type="column"
+													data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+													<div class="elementor-widget-wrap elementor-element-populated">
+														<div class="elementor-background-overlay"></div>
+														<div class="elementor-element elementor-element-f5d3a6b elementor-widget__width-auto elementor-view-default exad-sticky-section-no exad-glass-effect-no ha-has-bg-overlay elementor-widget elementor-widget-icon"
+															data-id="f5d3a6b" data-element_type="widget"
+															data-widget_type="icon.default">
+															<div class="elementor-widget-container">
+																<div class="elementor-icon-wrapper">
+																	<div class="elementor-icon">
+																		<img src="./TRUMP JR – The Official Trump Jr_files/LOGO (24).png" alt="">
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-4ab72e7 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-heading"
+															data-id="4ab72e7" data-element_type="widget"
+															data-widget_type="heading.default">
+															<div class="elementor-widget-container">
+																<h2
+																	class="elementor-heading-title elementor-size-default">
+																	BUY/SELL TAX</h2>
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-6696fe1 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-heading"
+															data-id="6696fe1" data-element_type="widget"
+															data-widget_type="heading.default">
+															<div class="elementor-widget-container">
+																<h2
+																	class="elementor-heading-title elementor-size-default">
+																	O%</h2>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section
+			class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-3b0dbef elementor-section-full_width elementor-section-height-default elementor-section-height-default exad-glass-effect-no exad-sticky-section-no"
+			data-id="3b0dbef" data-element_type="section" id="contract"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
+			<div class="elementor-background-overlay"></div>
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a290158 exad-glass-effect-no exad-sticky-section-no"
+					data-id="a290158" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2e6a24f exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-elementskit-heading"
+							data-id="2e6a24f" data-element_type="widget" data-widget_type="elementskit-heading.default">
+							<div class="elementor-widget-container">
+								<div class="ekit-wid-con">
+									<div
+										class="ekit-heading elementskit-section-title-wraper text_center   ekit_heading_tablet-   ekit_heading_mobile-">
+										<h2 class="ekit-heading--title elementskit-section-title ">CONTRACT ADDRESS
+											<span><span>TRUMP MAGA</span></span></h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-a3f05f4 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-ucaddon_copy_coupon_code"
+							data-id="a3f05f4" data-element_type="widget"
+							data-widget_type="ucaddon_copy_coupon_code.default">
+							<div class="elementor-widget-container">
+
+								<!-- start Copy Coupon Code -->
+								<style>
+									/* widget: Copy Coupon Code */
+
+									#uc_copy_coupon_code_elementor_a3f05f4 {
+										display: inline-block;
+										text-align: center;
+										cursor: pointer;
+									}
+
+									#uc_copy_coupon_code_elementor_a3f05f4 .click-to-copy__text {
+										display: inline-block;
+									}
+
+									#uc_copy_coupon_code_elementor_a3f05f4 .copy_succes {
+										display: none;
+									}
+
+									#uc_copy_coupon_code_elementor_a3f05f4.uc-is-copied .click-to-copy__text {
+										display: none;
+									}
+
+									#uc_copy_coupon_code_elementor_a3f05f4.uc-is-copied .copy_succes {
+										display: inline-block;
+									}
+
+									#uc_copy_coupon_code_elementor_a3f05f4 .ue-icon {
+										display: inline-block;
+										font-size: inherit;
+
+									}
+
+									#uc_copy_coupon_code_elementor_a3f05f4 .ue-icon svg {
+										width: 1em;
+										height: 1em;
+									}
+								</style>
+
+								<div class="ue_coupon_code">
+
+									<span id="uc_copy_coupon_code_elementor_a3f05f4" class="click-to-copy none"
+										data-link-type="no">
+
+										<div class="click-to-copy__input-wrapper "
+											style="overflow:hidden;opacity:0;position:absolute;z-index:-1;top:0px;left:0px;">
+											<input class="click-to-copy__input"
+												value="UPDATE">
+										</div>
+
+										<span class="click-to-copy__text "><span class="ue-icon"><i
+													class="fas fa-copy"></i></span>
+											UPDATE</span>
+										<span class="copy_succes" style="color:#ffffff;">
+
+
+
+											Copied!
+
+
+
+										</span>
+									</span>
+								</div>
+								<!-- end Copy Coupon Code -->
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-e73b7d4 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-text-editor"
+							data-id="e73b7d4" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section
+			class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-dcc3c8b elementor-section-full_width elementor-section-height-default elementor-section-height-default exad-glass-effect-no exad-sticky-section-no"
+			data-id="dcc3c8b" data-element_type="section" id="community"
+			data-settings="{&quot;_ha_eqh_enable&quot;:false}">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c2f3277 exad-glass-effect-no exad-sticky-section-no"
+					data-id="c2f3277" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-c9da1ab exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-elementskit-heading"
+							data-id="c9da1ab" data-element_type="widget" data-widget_type="elementskit-heading.default">
+							<div class="elementor-widget-container">
+								<div class="ekit-wid-con">
+									<div
+										class="ekit-heading elementskit-section-title-wraper text_center   ekit_heading_tablet-   ekit_heading_mobile-">
+										<h2 class="ekit-heading--title elementskit-section-title ">Join the
+											<span><span>TRUMP MAGA</span></span> Community!</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-568a76f elementor-shape-circle elementor-grid-0 e-grid-align-center exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-social-icons"
+							data-id="568a76f" data-element_type="widget" data-widget_type="social-icons.default">
+							<div class="elementor-widget-container">
+								<div class="elementor-social-icons-wrapper elementor-grid">
+									<span class="elementor-grid-item">
+										<a class="elementor-icon elementor-social-icon elementor-social-icon-telegram elementor-repeater-item-1f6349c"
+											href="https://t.me/Magameme_Portal" target="_blank">
+											<span class="elementor-screen-only">Telegram</span>
+											<svg class="e-font-icon-svg e-fab-telegram" viewBox="0 0 496 512"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z">
+												</path>
+											</svg> </a>
+									</span>
+									<span class="elementor-grid-item">
+										<a class="elementor-icon elementor-social-icon elementor-social-icon-x-twitter elementor-repeater-item-4b5f826"
+											href="https://x.com/Magameme_sol" target="_blank">
+											<span class="elementor-screen-only">X-twitter</span>
+											<svg class="e-font-icon-svg e-fab-x-twitter" viewBox="0 0 512 512"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+												</path>
+											</svg> </a>
+									</span>
+									<span class="elementor-grid-item">
+										<a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-repeater-item-d65bb3a"
+											href="#D"
+											target="_blank">
+											<span class="elementor-screen-only"></span>
+											<svg xmlns="http://www.w3.org/2000/svg"
+												xmlns:xlink="http://www.w3.org/1999/xlink" width="324" height="362"
+												viewBox="0 0 324 362">
+												<metadata></metadata>
+												<image id="Layer_0" data-name="Layer 0" x="31" y="24" width="268"
+													height="319"
+													xlink:href="data:img/png;base64,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">
+												</image>
+											</svg> </a>
+									</span>
+									<span class="elementor-grid-item">
+										<a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-repeater-item-3b78d74"
+											target="_blank">
+											<span class="elementor-screen-only"></span>
+											<svg xmlns="http://www.w3.org/2000/svg"
+												xmlns:xlink="http://www.w3.org/1999/xlink" width="163" height="176"
+												viewBox="0 0 163 176">
+												<metadata></metadata>
+												<image id="Layer_0" data-name="Layer 0" x="15" y="12" width="132"
+													height="148"
+													xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACUCAQAAAD4m0m3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfpARMUKSIIWuSIAAAEM0lEQVR42uXd27arIAwF0LDH+f9fdj8w7Gl3vRCyVi7Ca62ks6gIGtomwaUH0KLDaKEQn5WHYsRBHFcchhEDcV1pCIY/xFiF7hi+ELrKXDH8IOYqcsPwgbBV4oLBh8BUQMfgQmB3TsXgQXB2TMP4KcXA2y+hRfhchuAtAwvh2SkBUyAh/HvrQAwURNxNLAgDARE+pIHAYF01fMtm/zMQEC1+fAnwI0qfLF+/IheEiD8GrC0yutheGNADknWvwcYI61luE5WPYrQMI1cjEO+boDHa8JbzBEN/4h3E0ccojDa8pQ1h6PtXEMiwtuHvI+gn9nQGwWio2/D3LAfjffSHezyC0Jy6eH3KDdgOBqL+CzFz2cvTwTZcfd4hLNf+eAzjvMkOgegARWFYY287BLIX6I0BmzVpG74z7IUB/QP/kQLkYhDuZHjzGvEDeKrCHKrjYRDGxNhjlmUwPAZvmRilIER4GLB24TmcnxrDe14jLUbEBE9KjKiZrnQYkVN+qTpdmi52E3znFtsdN0SnvddgYIQjzECIYDEwrQEQzezdp3ZSJjWCBcLWLlBnBeBBahuPmMFI1Q5QEFqMpAgYiFGMxAg4iGuMhGcEJsQxRvJ2wIL4xCiDwIHAEXj2YTcORCWCXijzGtUQRBrr0CiGIJILIvQZzRwQCV5wiIdIgBAPkQQhFiLZU9sREInawQxEqQ6zPu4RiHod5onI7yAe3g7GIJZBuIJYCuEYouoZwRj3J8Ry7eAIYmEE2XaIxRFE6r4bDiToxd7FLt0OUBAPQbBBPAhhFuJhBHMQj0TQQjwWQQNRE0ER9z1EVQJluYZYBOEaYiGEc4jFEI4gFiT4hlgW4R1iaYQdYnmEDuHLkJCgF88pP1SHmYLpBYG8a6BgeEAwbp3gGFwI7t0jFIMH4XMLDcPI+8Dp+NUMgoGGiJohMWMgIXzbARgDBRGNYMZAQGRBMGHY3+nKWdR5zWxv+eEK/sVaZbuYS7/EzFAXVOZekueFG5Za2pKQixmye8uwZiZ7DIY1fwQzWNfDBJOrrlxCNhaESHkMbPbCwhj4NI5FMaqtr0E7geLfDecXSp4bbLYAv4LGaP2BU0j63JACu/j/f/I2Ol9MDMZXOuiZXcYT2DBOE4RrdpkJYQbjK/7jh9KzLF6sH3SbXvzg/Ol8fL6Y8dUU/taPw1AvK2EN5i60ptwegXG5h/v3NaxTJ+cVNNXWNgzz0jO2cr/zptp6DmPoGxmWp9L3Egmn67oLliVe+NQP4RV9ToiYOYlEC5/GIbx+RQaILBlwCyYIT1kwh0Z0q0hxaOwlCiPZybKXii9GUyBEiq7/yupil1v/lXnTVWC5GR+IXspMKLIhRIqsE+gBYaVwGSP1gegl12NrgRAiWVaXTQAhwlwYuxiECGNh7KIQIsiFsYtDiOBmTspDiHgslDpQfgEhBDQdWb1l4AAAAABJRU5ErkJggg==">
+												</image>
+											</svg> </a>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section
+			class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-80ab76c elementor-section-full_width elementor-section-height-default elementor-section-height-default exad-glass-effect-no exad-sticky-section-no"
+			data-id="80ab76c" data-element_type="section"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d45e2f2 exad-glass-effect-no exad-sticky-section-no"
+					data-id="d45e2f2" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-b3aed68 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-text-editor"
+							data-id="b3aed68" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								© 2025 TRUMP MAGA. All rights reserved. </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script>
+		;
+		(function ($, w) {
+			'use strict';
+			let $window = $(w);
+
+			$(document).ready(function () {
+
+				let isEnable = "";
+				let isEnableLazyMove = "";
+				let speed = isEnableLazyMove ? '0.7' : '0.2';
+
+				if (!isEnable) {
+					return;
+				}
+
+				if (typeof haCursor == 'undefined' || haCursor == null) {
+					initiateHaCursorObject(speed);
+				}
+
+				setTimeout(function () {
+					let targetCursor = $('.ha-cursor');
+					if (targetCursor) {
+						if (!isEnable) {
+							$('body').removeClass('hm-init-default-cursor-none');
+							$('.ha-cursor').addClass('ha-init-hide');
+						} else {
+							$('body').addClass('hm-init-default-cursor-none');
+							$('.ha-cursor').removeClass('ha-init-hide');
+						}
+					}
+				}, 500);
+
+			});
+
+		}(jQuery, window));
+	</script>
+
+	<script type="text/javascript">
+		const lazyloadRunObserver = () => {
+			const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
+			const lazyloadBackgroundObserver = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						let lazyloadBackground = entry.target;
+						if (lazyloadBackground) {
+							lazyloadBackground.classList.add('e-lazyloaded');
+						}
+						lazyloadBackgroundObserver.unobserve(entry.target);
+					}
+				});
+			}, { rootMargin: '200px 0px 200px 0px' });
+			lazyloadBackgrounds.forEach((lazyloadBackground) => {
+				lazyloadBackgroundObserver.observe(lazyloadBackground);
+			});
+		};
+		const events = [
+			'DOMContentLoaded',
+			'elementor/lazyload/observe',
+		];
+		events.forEach((event) => {
+			document.addEventListener(event, lazyloadRunObserver);
+		});
+	</script>
+	<link rel="stylesheet" id="elementor-icons-ekiticons-css"
+		href="./TRUMP JR – The Official Trump Jr_files/ekiticons.css" media="all">
+	<script src="./TRUMP JR – The Official Trump Jr_files/jquery.sticky-sidebar.js.download"
+		id="exad-sticky-jquery-js"></script>
+	<script id="eae-main-js-extra">
+		var eae = { "ajaxurl": "https:\/\/trumpjrcoinsol.com\/wp-admin\/admin-ajax.php", "current_url": "aHR0cHM6Ly90cnVtcGpyY29pbnNvbC5jb20v", "nonce": "ffa7a1ef27", "plugin_url": "https:\/\/trumpjrcoinsol.com\/wp-content\/plugins\/addon-elements-for-elementor-page-builder\/" };
+		var eae_editor = { "plugin_url": "https:\/\/trumpjrcoinsol.com\/wp-content\/plugins\/addon-elements-for-elementor-page-builder\/" };
+	</script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/eae.min.js.download" id="eae-main-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/index.min.js.download" id="eae-index-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/v4-shims.min.js.download"
+		id="font-awesome-4-shim-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/animated-main.min.js.download" id="animated-main-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/particles.min.js.download" id="eae-particles-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/magnific.min.js.download" id="wts-magnific-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/vegas.min.js.download" id="vegas-js"></script>
+	<script id="exad-main-script-js-extra">
+		var exad_ajax_object = { "ajax_url": "https:\/\/trumpjrcoinsol.com\/wp-admin\/admin-ajax.php", "nonce": "192d8a7236" };
+	</script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/exad-scripts.min.js.download"
+		id="exad-main-script-js"></script>
+	<script id="pa-admin-bar-js-extra">
+		var PaDynamicAssets = { "nonce": "9d51286519", "post_id": "9", "ajaxurl": "https:\/\/trumpjrcoinsol.com\/wp-admin\/admin-ajax.php" };
+	</script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/admin-bar.js.download" id="pa-admin-bar-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/hello-frontend.min.js.download"
+		id="hello-theme-frontend-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/frontend-script.js.download"
+		id="elementskit-framework-js-frontend-js"></script>
+	<script id="elementskit-framework-js-frontend-js-after">
+		var elementskit = {
+			resturl: 'https://www.magameme.online/wp-json/elementskit/v1/',
+		}
+
+
+	</script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/widget-scripts.js.download"
+		id="ekit-widget-scripts-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/extension-reading-progress-bar.min.js.download"
+		id="happy-reading-progress-bar-js"></script>
+	<script id="eael-general-js-extra">
+		var localize = { "ajaxurl": "https:\/\/trumpjrcoinsol.com\/wp-admin\/admin-ajax.php", "nonce": "80949bea2e", "i18n": { "added": "Added ", "compare": "Compare", "loading": "Loading..." }, "eael_translate_text": { "required_text": "is a required field", "invalid_text": "Invalid", "billing_text": "Billing", "shipping_text": "Shipping", "fg_mfp_counter_text": "of" }, "page_permalink": "https:\/\/trumpjrcoinsol.com\/", "cart_redirectition": "", "cart_page_url": "", "el_breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } };
+	</script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/general.min.js.download" id="eael-general-js"></script>
+	<script id="happy-elementor-addons-js-extra">
+		var HappyLocalize = { "ajax_url": "https:\/\/trumpjrcoinsol.com\/wp-admin\/admin-ajax.php", "nonce": "475ef4b28e", "pdf_js_lib": "https:\/\/trumpjrcoinsol.com\/wp-content\/plugins\/happy-elementor-addons\/assets\/vendor\/pdfjs\/lib" };
+	</script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/happy-addons.min.js.download"
+		id="happy-elementor-addons-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/webpack-pro.runtime.min.js.download"
+		id="elementor-pro-webpack-runtime-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/webpack.runtime.min.js.download"
+		id="elementor-webpack-runtime-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/frontend-modules.min.js.download"
+		id="elementor-frontend-modules-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/hooks.min.js.download" id="wp-hooks-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/i18n.min.js.download" id="wp-i18n-js"></script>
+	<script id="wp-i18n-js-after">
+		wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
+	</script>
+	<script id="elementor-pro-frontend-js-before">
+		var ElementorProFrontendConfig = { "ajaxurl": "https:\/\/trumpjrcoinsol.com\/wp-admin\/admin-ajax.php", "nonce": "60a035bbfa", "urls": { "assets": "https:\/\/trumpjrcoinsol.com\/wp-content\/plugins\/elementor-pro\/assets\/", "rest": "https:\/\/trumpjrcoinsol.com\/wp-json\/" }, "settings": { "lazy_load_background_images": true }, "popup": { "hasPopUps": false }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Email" }, "print": { "title": "Print" }, "x-twitter": { "title": "X" }, "threads": { "title": "Threads" } }, "facebook_sdk": { "lang": "en_US", "app_id": "" }, "lottie": { "defaultAnimationUrl": "https:\/\/trumpjrcoinsol.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json" } };
+	</script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/frontend.min.js.download"
+		id="elementor-pro-frontend-js"></script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/core.min.js.download" id="jquery-ui-core-js"></script>
+	<script id="elementor-frontend-js-before">
+		var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } }, "hasCustomBreakpoints": false }, "version": "3.26.5", "is_static": false, "experimentalFeatures": { "e_font_icon_svg": true, "additional_custom_breakpoints": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_onboarding": true, "e_css_smooth_scroll": true, "theme_builder_v2": true, "hello-theme-header-footer": true, "home_screen": true, "editor_v2": true, "e_element_cache": true, "link-in-bio": true, "floating-buttons": true, "launchpad-checklist": true }, "urls": { "assets": "https:\/\/trumpjrcoinsol.com\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/trumpjrcoinsol.com\/wp-admin\/admin-ajax.php", "uploadUrl": "https:\/\/trumpjrcoinsol.com\/wp-content\/uploads" }, "nonces": { "floatingButtonsClickTracking": "4729135554" }, "swiperClass": "swiper", "settings": { "page": { "ha_cmc_init_switcher": "no" }, "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "title", "hello_header_menu_layout": "horizontal", "hello_footer_logo_type": "logo", "ha_rpb_enable": "no" }, "post": { "id": 9, "title": "%20TRUMP%20JR%20%E2%80%93%20The%20Official%20Trump%20Jr", "excerpt": "", "featuredImage": false } };
+	</script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/frontend.min(1).js.download"
+		id="elementor-frontend-js"></script><span id="elementor-device-mode" class="elementor-screen-only"></span>
+	<script src="./TRUMP JR – The Official Trump Jr_files/elements-handlers.min.js.download"
+		id="pro-elements-handlers-js"></script><svg style="display: none;" class="e-font-icon-svg-symbols"></svg>
+	<script src="./TRUMP JR – The Official Trump Jr_files/animate-circle.min.js.download"
+		id="animate-circle-js"></script>
+	<script id="elementskit-elementor-js-extra">
+		var ekit_config = { "ajaxurl": "https:\/\/trumpjrcoinsol.com\/wp-admin\/admin-ajax.php", "nonce": "4d2b0649a8" };
+	</script>
+	<script src="./TRUMP JR – The Official Trump Jr_files/elementor.js.download" id="elementskit-elementor-js"></script>
+
+	<!--   Unlimited Elements 1.5.133 Scripts -->
+	<script type="text/javascript" id="unlimited-elements-scripts">
+
+		/* Copy Coupon Code scripts: */
+
+		jQuery(document).ready(function () {
+			function uc_copy_coupon_code_elementor_789c473_start() {
+
+				function uc_copy_coupon_code_elementor_789c473_start() {
+
+					var buttonCopy = jQuery('#uc_copy_coupon_code_elementor_789c473');
+					var dataLinkType = buttonCopy.data('link-type');
+					var copiedClass = 'uc-is-copied';
+
+					function openSuccessLink() {
+
+						if (dataLinkType == 'no')
+							return (false);
+
+						if (buttonCopy.hasClass(copiedClass) == false)
+							return (false);
+
+						if (dataLinkType == 'auto') {
+
+							var linkHref = "#";
+							var linkOpenType = buttonCopy.find('a').attr('target');
+
+							if (linkOpenType != '_blank')
+								linkOpenType = '_self';
+
+							setTimeout(function () {
+
+								window.open(linkHref, linkOpenType);
+
+							}, 1800);
+
+						}
+
+					}
+
+					buttonCopy.on('click', function (event) {
+
+						var objButton = jQuery(this);
+						var objText = objButton.find(".click-to-copy__text");
+						var objInput = objButton.find(".click-to-copy__input");
+
+						objInput.select();
+						objInput[0].setSelectionRange(0, 99999); /* For mobile devices */
+
+						try {
+
+							var success = document.execCommand('copy');
+							objInput.blur();
+
+							objButton.addClass(copiedClass);
+
+							openSuccessLink();
+
+							setTimeout(function () {
+
+								objButton.removeClass(copiedClass);
+
+							}, 1800);
+
+
+						} catch (err) {
+							alert('Press Ctrl/CMD + C to copy this to your clipboard.');
+						}
+
+					});//click
+
+
+
+				} if (jQuery("#uc_copy_coupon_code_elementor_789c473").length) uc_copy_coupon_code_elementor_789c473_start(); else
+					jQuery(document).on('elementor/popup/show', () => { if (jQuery("#uc_copy_coupon_code_elementor_789c473").length) uc_copy_coupon_code_elementor_789c473_start(); });
+
+			} if (jQuery("#uc_copy_coupon_code_elementor_789c473").length) uc_copy_coupon_code_elementor_789c473_start();
+			jQuery(document).on('elementor/popup/show', (event, id, objPopup) => {
+				if (objPopup.$element.has(jQuery("#uc_copy_coupon_code_elementor_789c473")).length) uc_copy_coupon_code_elementor_789c473_start();
+			});
+		});
+
+
+
+		/* Copy Coupon Code scripts: */
+
+		jQuery(document).ready(function () {
+			function uc_copy_coupon_code_elementor_a3f05f4_start() {
+
+				function uc_copy_coupon_code_elementor_a3f05f4_start() {
+
+					var buttonCopy = jQuery('#uc_copy_coupon_code_elementor_a3f05f4');
+					var dataLinkType = buttonCopy.data('link-type');
+					var copiedClass = 'uc-is-copied';
+
+					function openSuccessLink() {
+
+						if (dataLinkType == 'no')
+							return (false);
+
+						if (buttonCopy.hasClass(copiedClass) == false)
+							return (false);
+
+						if (dataLinkType == 'auto') {
+
+							var linkHref = "#";
+							var linkOpenType = buttonCopy.find('a').attr('target');
+
+							if (linkOpenType != '_blank')
+								linkOpenType = '_self';
+
+							setTimeout(function () {
+
+								window.open(linkHref, linkOpenType);
+
+							}, 1800);
+
+						}
+
+					}
+
+					buttonCopy.on('click', function (event) {
+
+						var objButton = jQuery(this);
+						var objText = objButton.find(".click-to-copy__text");
+						var objInput = objButton.find(".click-to-copy__input");
+
+						objInput.select();
+						objInput[0].setSelectionRange(0, 99999); /* For mobile devices */
+
+						try {
+
+							var success = document.execCommand('copy');
+							objInput.blur();
+
+							objButton.addClass(copiedClass);
+
+							openSuccessLink();
+
+							setTimeout(function () {
+
+								objButton.removeClass(copiedClass);
+
+							}, 1800);
+
+
+						} catch (err) {
+							alert('Press Ctrl/CMD + C to copy this to your clipboard.');
+						}
+
+					});//click
+
+
+
+				} if (jQuery("#uc_copy_coupon_code_elementor_a3f05f4").length) uc_copy_coupon_code_elementor_a3f05f4_start(); else
+					jQuery(document).on('elementor/popup/show', () => { if (jQuery("#uc_copy_coupon_code_elementor_a3f05f4").length) uc_copy_coupon_code_elementor_a3f05f4_start(); });
+
+			} if (jQuery("#uc_copy_coupon_code_elementor_a3f05f4").length) uc_copy_coupon_code_elementor_a3f05f4_start();
+			jQuery(document).on('elementor/popup/show', (event, id, objPopup) => {
+				if (objPopup.$element.has(jQuery("#uc_copy_coupon_code_elementor_a3f05f4")).length) uc_copy_coupon_code_elementor_a3f05f4_start();
+			});
+		});
+
+
+	</script>
+	<style>
+		.unlimited-elements-background-overlay {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 0;
+		}
+
+		.unlimited-elements-background-overlay.uc-bg-front {
+			z-index: 999;
+		}
+	</style>
+
+	<script type="text/javascript">
+
+		jQuery(document).ready(function () {
+
+			function ucBackgroundOverlayPutStart() {
+
+				var objBG = jQuery(".unlimited-elements-background-overlay").not(".uc-bg-attached");
+
+				if (objBG.length == 0)
+					return (false);
+
+				objBG.each(function (index, bgElement) {
+
+					var objBgElement = jQuery(bgElement);
+
+					var targetID = objBgElement.data("forid");
+
+					var location = objBgElement.data("location");
+
+					switch (location) {
+						case "body":
+						case "body_front":
+							var objTarget = jQuery("body");
+							break;
+						case "layout":
+						case "layout_front":
+							var objLayout = jQuery("*[data-id=\"" + targetID + "\"]");
+							var objTarget = objLayout.parents(".elementor");
+							if (objTarget.length > 1)
+								objTarget = jQuery(objTarget[0]);
+							break;
+						default:
+							var objTarget = jQuery("*[data-id=\"" + targetID + "\"]");
+							break;
+					}
+
+
+					if (objTarget.length == 0)
+						return (true);
+
+					var objVideoContainer = objTarget.children(".elementor-background-video-container");
+
+					if (objVideoContainer.length == 1)
+						objBgElement.detach().insertAfter(objVideoContainer).show();
+					else
+						objBgElement.detach().prependTo(objTarget).show();
+
+
+					var objTemplate = objBgElement.children("template");
+
+					if (objTemplate.length) {
+
+						var clonedContent = objTemplate[0].content.cloneNode(true);
+
+						var objScripts = jQuery(clonedContent).find("script");
+						if (objScripts.length)
+							objScripts.attr("type", "text/javascript");
+
+						objBgElement.append(clonedContent);
+
+						objTemplate.remove();
+					}
+
+					objBgElement.trigger("bg_attached");
+					objBgElement.addClass("uc-bg-attached");
+
+				});
+			}
+
+			ucBackgroundOverlayPutStart();
+
+			jQuery(document).on('elementor/popup/show', ucBackgroundOverlayPutStart);
+			jQuery("body").on('uc_dom_updated', ucBackgroundOverlayPutStart);
+
+		});
+
+
+	</script>
+
+
+
+
+</body>
+
+</html>
