@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<!-- saved from url=(0228)https://app.vidzflow.com/v/yAzZqp7Nfe?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23cbde64&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen -->
+<html lang="en" love-deals="879BC0364EB9EBEE3DBE71B15E175613"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid:not(.vjs-audio-only-mode) {
+        padding-top: 56.25%
+      }
+    </style><style class="vjs-styles-dimensions">
+      .vidzflow-player-dimensions {
+        width: 848px;
+        height: 464px;
+      }
+
+      .vidzflow-player-dimensions.vjs-fluid:not(.vjs-audio-only-mode) {
+        padding-top: 54.71698113207547%;
+      }
+    </style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <meta name="csrf-token" content="">
+    <link rel="preload" as="image" href="./yAzZqp7Nfe_1726045660.jpg" imagesrcset="https://r2.vidzflow.com/thumbnails/yAzZqp7Nfe_1726045660.jpg">
+
+    <link href="./video-js.min.css" rel="stylesheet">
+
+    <script src="./video.min.js.download"></script>
+    <script src="./silvermine-videojs-quality-selector.min.js.download"></script>
+
+    
+    <style>
+        /* Responsive video size */
+        #vidzflow-player {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+
+        #vidzflow-player video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+         #vidzflow-player .vjs-poster img {
+            object-fit: cover !important;
+        }
+
+        :root {
+            --playeraccent: #ff0000;
+        }
+
+        body .watermark {
+            position: absolute;
+            z-index: 99;
+        }
+
+        body .watermark img {
+            height: 90px;
+            opacity: .5;
+            transition: .2s ease-in-out;
+        }
+
+        body .watermark:hover img {
+            opacity: 1;
+        }
+
+        body .custom-cta {
+            display: flex;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 99;
+            opacity: 0;
+            gap: 10px;
+            border-radius: 16px;
+            background-color:
+                #4e5ffd
+            ;
+            padding: 12px;
+            text-decoration: none;
+            transition: .3s ease-in-out;
+        }
+
+        body .custom-cta.show {
+            opacity: 1;
+        }
+
+        body .custom-cta p {
+            margin: 0;
+            font-weight: 500;
+            line-height: 1;
+            font-size: 16px;
+            color:
+                #ffffff
+            ;
+        }
+
+        body .custom-cta svg path {
+            stroke:
+                #ffffff
+            ;
+        }
+
+         .video-js .vjs-big-play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0 !important;
+            border: 0;
+            z-index: 1;
+            background-color:
+                #cbde64
+            ;
+            border-radius: 100px;
+            width: 48px;
+            height: 48px;
+            transition: all 0.3s ease;
+        }
+
+        .video-js .vjs-big-play-button.has-custom {
+            width: unset;
+            height: unset;
+            padding: 7px;
+        }
+        .video-js .vjs-big-play-button.has-custom .vjs-icon-placeholder::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: fit-content;
+            height: fit-content;
+            transform: translate(28%, 0%);
+        }
+
+        .video-js .vjs-custom-play-button-wrapper,
+        .video-js .vjs-custom-mobile-play-button-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            z-index: 1001;
+            /* Set initial z-index */
+        }
+
+        .end-thumbnail.visible+.video-js .vjs-custom-play-button-wrapper,
+        .end-thumbnail.visible+.video-js .vjs-custom-mobile-play-button-wrapper {
+            z-index: 0;
+            /* Reset z-index when end thumbnail is visible */
+        }
+
+        .video-js:hover .vjs-big-play-button {
+            background-color:
+                #cbde64
+            ;
+        }
+
+        .video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+            top: 2px;
+        }
+
+        /* CSS for chapter markers */
+        .vjs-chapter-marker {
+            position: absolute;
+            bottom: 0;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+        .vjs-chapter-marker::before,
+        .vjs-chapter-marker::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: white;
+        }
+
+        .vjs-chapter-marker::before {
+            left: 0;
+        }
+
+        .vjs-chapter-marker::after {
+            right: 0;
+        }
+
+        .vjs-chapter-marker:hover {
+            background-color: #44c3c3;
+        }
+
+        .vjs-chapter-marker span {
+            display: none;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            font-size: 12px;
+            padding: 3px 6px;
+            background-color: rgba(73, 73, 73, 0.40);
+            color: white;
+            border-radius: 4px;
+        }
+
+        .vjs-menu .vjs-menu-content {
+            border-radius: 4px !important;
+        }
+
+        .vjs-chapter-marker:hover span {
+            display: block;
+        }
+
+        .video-js .vjs-text-track-display>div>div>div {
+            font-size: 25px !important;
+            line-height: 33px !important;
+            padding: 5px !important;
+            background: transparent !important;
+            text-shadow: 1px 1px 2px #000000;
+            display: inline-block !important;
+        }
+
+        .vjs-control-bar {
+            padding: 2rem 10px 10px 10px;
+            height: auto !important;
+
+                            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)) !important;
+                         background-color: transparent !important;
+            align-items: center;
+        }
+
+        .vjs-play-control {
+            height: 32px !important;
+            width: 32px !important;
+            border-radius: 4px;
+            transition: .3s ease-in-out;
+            background-color: transparent;
+        }
+
+        .vjs-play-control:hover {
+            background-color:
+                #cbde64
+            ;
+        }
+
+        .vjs-button>.vjs-icon-placeholder:before {
+            font-size: 30px;
+            line-height: 33px;
+        }
+
+        .vjs-progress-holder {
+            height: 7px !important;
+            background-color: rgba(255, 255, 255, 0.25) !important;
+            border-radius: 100px !important;
+        }
+
+        .video-js .vjs-play-progress {
+            background-color:
+                #cbde64
+            ;
+        }
+
+        .video-js .vjs-slider {
+            background-color: rgba(255, 255, 255, 0.25) !important;
+        }
+
+        .video-js .vjs-load-progress div {
+            background-color: rgba(255, 255, 255, 0.25) !important;
+        }
+
+        .vjs-remaining-time-display {
+            font-size: 13px !important;
+        }
+
+        .vjs-mute-control {
+            height: 32px !important;
+        }
+
+        .vjs-mute-control span::before {
+            font-size: 20px !important;
+        }
+
+        .vjs-playback-rate {
+            height: 32px !important;
+        }
+
+        .vjs-fullscreen-control {
+            height: 32px !important;
+        }
+
+        .vjs-chapter-marker {
+            height: 12px !important;
+        }
+
+        .vjs-quality-selector .vjs-menu-button {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .vjs-quality-selector .vjs-icon-placeholder {
+            font-family: "VideoJS";
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .vjs-quality-selector {
+            height: 32px !important;
+        }
+
+        .vjs-quality-selector .vjs-icon-placeholder::before {
+            content: "\f114";
+            font-size: 20px;
+            line-height: 33px;
+        }
+
+        .vjs-quality-changing .vjs-big-play-button {
+            display: none;
+        }
+
+        .vjs-quality-changing .vjs-control-bar {
+            display: -webkit-box;
+            display: flex;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .video-js .vjs-play-progress:before {
+            line-height: .8em;
+        }
+
+        .video-js .vjs-progress-control:hover .vjs-play-progress:before {
+            line-height: .5em;
+        }
+
+         .vjs-custom-play-button-wrapper,
+        .vjs-custom-mobile-play-button-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+
+        .vjs-custom-play-button-icon,
+        .vjs-custom-mobile-play-button-icon {
+            max-width: 150px;
+            max-height: 150px;
+        }
+
+        /* Video thumbnail styling */
+        .vjs-custom-video-as-thumbnail-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .vjs-custom-video-as-thumbnail-wrapper video {
+            width: 100%;
+        }
+
+        .vjs-custom-play-button-wrapper.keep-original .vjs-custom-play-button-icon,
+        .vjs-custom-mobile-play-button-wrapper.keep-original .vjs-custom-mobile-play-button-icon {
+            max-width: none;
+            max-height: none;
+            width: auto;
+            height: auto;
+        }
+
+        .vjs-custom-play-button-icon img,
+        .vjs-custom-mobile-play-button-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @media screen and (max-width: 991px) {
+
+            .vjs-custom-play-button-icon,
+            .vjs-custom-mobile-play-button-icon {
+                max-width: 100px;
+                max-height: 100px;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+
+            .vjs-custom-play-button-icon,
+            .vjs-custom-mobile-play-button-icon {
+                max-width: 48px;
+                max-height: 48px;
+            }
+        }
+
+         .video-js .vjs-text-track-display {
+            pointer-events: none;
+            position: absolute !important;
+            bottom: 40px !important;
+            left: 0 !important;
+            right: 0 !important;
+            top: auto !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: flex-end !important;
+            z-index: 1;
+            transform: none !important;
+        }
+
+        .video-js .vjs-text-track-display>div {
+            width: 100% !important;
+            position: relative !important;
+            top: auto !important;
+            bottom: auto !important;
+            left: auto !important;
+            right: auto !important;
+            display: flex !important;
+            justify-content: center !important;
+        }
+
+        .video-js .vjs-text-track-display>div>div {
+            background-color: transparent !important;
+            padding: 0 !important;
+            margin-bottom: 0.5em;
+            display: flex !important;
+            justify-content: center !important;
+            position: relative !important;
+            top: auto !important;
+            bottom: auto !important;
+            left: auto !important;
+            right: auto !important;
+        }
+
+        .video-js .vjs-text-track-display>div>div>div {
+            font-size: 22px !important;
+            line-height: 1.3 !important;
+            text-shadow:
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;
+            color: white !important;
+            display: inline-block !important;
+            max-width: 90%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 0.2em 0.5em;
+            border-radius: 4px;
+            position: relative !important;
+            top: auto !important;
+            bottom: auto !important;
+            left: auto !important;
+            right: auto !important;
+        }
+
+        /* Fullscreen subtitle adjustments */
+        .video-js.vjs-fullscreen .vjs-text-track-display>div>div>div {
+            font-size: 32px !important;
+        }
+
+        /* Ensure subtitles are always at the bottom in fullscreen */
+        .video-js.vjs-fullscreen .vjs-text-track-display {
+            bottom: 60px !important;
+        }
+
+        .end-thumbnail.visible+.video-js .vjs-big-play-button {
+            display: none !important;
+        }
+
+        .video-js {
+            background-color:
+                #000000
+                !important;
+        }
+
+        /* End thumbnail styling */
+        .end-thumbnail.visible {
+            display: flex;
+            cursor: pointer;
+        }
+
+        .end-thumbnail.visible img {
+            display: flex;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .end-thumbnail {
+            display: none;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Password protection form styles */
+        .password-protection-form {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://cdn.vidzflow.com/https://r2.vidzflow.com/thumbnails/yAzZqp7Nfe_1726045660.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 1000;
+        }
+
+        .password-protection-form::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            z-index: -1;
+        }
+
+        .password-form-inner {
+            position: relative;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            color: white;
+            z-index: 1;
+        }
+
+        .password-form-inner h2 {
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .password-form-inner p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        #password-protection-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .input-wrapper {
+            display: flex;
+            width: 100%;
+            max-width: 320px;
+            background-color: white;
+            border-radius: 50px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+            margin-bottom: 0.5rem;
+        }
+
+        #password-protection-form input[type="password"] {
+            flex-grow: 1;
+            padding: 0.75rem 1.25rem;
+            border: none;
+            background-color: transparent;
+            color: #333;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        #password-protection-form input[type="password"]:focus {
+            outline: none;
+        }
+
+        .input-wrapper:focus-within {
+            box-shadow: 0 0 0 2px rgba(78, 95, 253, 0.5);
+        }
+
+        #password-protection-form input[type="password"]::placeholder {
+            color: #999;
+        }
+
+        #password-protection-form button {
+            background-color: transparent;
+            border: none;
+            padding: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #password-protection-form button svg {
+            width: 24px;
+            height: 24px;
+            stroke: #4e5ffd;
+        }
+
+        #password-protection-form button:hover {
+            background-color: rgba(78, 95, 253, 0.1);
+        }
+
+        .error-message {
+            color: #ff4d4d;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            text-align: center;
+            min-height: 1.25em;
+            width: 100%;
+            max-width: 320px;
+        }
+
+        @media (max-width: 480px) {
+            .password-form-inner h2 {
+                font-size: 1.25rem;
+            }
+
+            .password-form-inner p {
+                font-size: 0.9rem;
+            }
+
+            .input-wrapper {
+                max-width: 280px;
+            }
+
+            #password-protection-form input[type="password"] {
+                font-size: 0.9rem;
+            }
+        }
+
+        .end-thumbnail.visible+.video-js .vjs-big-play-button {
+            display: none !important;
+        }
+
+        .video-js.vjs-fullscreen .vjs-tech {
+            width: 100% !important;
+            height: 100% !important;
+            position: relative;
+            margin: auto;
+        }
+
+        .custom-play-text {
+            padding: 5px 10px 5px 36px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            z-index: 1;
+            pointer-events: none;
+            line-height: 1.2;
+
+        }
+    </style>
+
+    <script src="./ua-parser.min.js.download"></script>
+
+    <script>
+        // Helper function to parse URL parameters
+        function falseOrArray(val) {
+            return val === 'false' ? false : decodeURIComponent(val).split(',');
+        }
+
+        // Helper function to convert string to boolean
+        function trueFalse(val) {
+            return val === 'true';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+
+            // Determine controls based on customization settings or defaults
+            const controls =
+                                    urlParams.has('controls') ? falseOrArray(urlParams.get('controls')) : ["play-large","play","progress","current-time","mute","volume","captions","settings","fullscreen"]
+                ;
+
+            // Ensure controls is always an array
+            const controlsArray = Array.isArray(controls) ? controls : [];
+
+            // Map control names to VideoJS control names
+            const controlMappings = {
+                'play-large': null,
+                'play': 'playToggle',
+                'progress': 'progressControl',
+                'current-time': 'remainingTimeDisplay',
+                'volume': 'volumePanel',
+                'fullscreen': 'fullscreenToggle'
+            };
+
+            // Process controls and add settings if needed
+            const updatedControls = controlsArray.reduce((acc, control) => {
+                if (control === 'settings') {
+                                            const settingControls = [];
+                                                    settingControls.push('playbackRateMenuButton');
+                                                                            settingControls.push('qualitySelector');
+                                                acc.push(...settingControls);
+                                    } else {
+                    const mappedControl = controlMappings[control] || control;
+                    if (mappedControl) acc.push(mappedControl);
+                }
+                return acc;
+            }, []);
+
+            // Configure VideoJS options
+            var options = {
+                controls: updatedControls.length > 0,
+                autoplay: urlParams.has('ap') ? trueFalse(urlParams.get('ap')) : false,
+                muted: urlParams.has('muted') ? trueFalse(urlParams.get('muted')) : false,
+                preload: 'metadata',
+                loop: urlParams.has('loop') ? trueFalse(urlParams.get('loop')) : false,
+                fluid: true,
+                responsive: true,
+                controlBar: updatedControls.length > 0 ? {
+                    children: updatedControls,
+                } : false,
+                playbackRates: updatedControls.includes('playbackRateMenuButton') ? [0.5, 1, 1.5, 2] : null,
+                playFromStartFullscreen: urlParams.has('play_from_start_fullscreen') ? trueFalse(urlParams.get(
+                    'play_from_start_fullscreen')) : false,
+            };
+
+            if (document.getElementById('password-protection-form')) {
+                const form = document.getElementById('password-protection-form');
+                const errorMessage = form.querySelector('.error-message');
+
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const password = this.querySelector('input[name="password"]').value;
+                    errorMessage.textContent = ''; // Clear previous error messages
+
+                    fetch('https://app.vidzflow.com/videos/yAzZqp7Nfe/verify-password', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': '',
+                        },
+                        body: JSON.stringify({
+                            password: password
+                        }),
+                        credentials: 'include'
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                localStorage.setItem('video_access_token_16912', data
+                                    .token);
+                                document.getElementById('password-form').style.display = 'none';
+                                player.show();
+                            } else {
+                                errorMessage.textContent = data.message ||
+                                    'Incorrect password. Please try again.';
+                            }
+                        })
+                        .catch(error => {
+                            errorMessage.textContent = 'An error occurred. Please try again.';
+                        });
+                });
+            }
+
+            // Initialize VideoJS player
+            const player = videojs('vidzflow-player', options, function() {
+                // Subtitle consistency improvements
+                this.textTrackSettings.setValues({
+                    backgroundColor: 'rgba(0, 0, 0, 0)',
+                    backgroundOpacity: '0',
+                    edgeStyle: 'raised'
+                });
+                this.textTrackSettings.updateDisplay();
+                // Force subtitle update on fullscreen change
+                const updateSubtitles = () => {
+                    const textTrackDisplay = this.el().querySelector('.vjs-text-track-display');
+                    if (textTrackDisplay) {
+                        textTrackDisplay.style.display = 'none';
+                        setTimeout(() => {
+                            textTrackDisplay.style.display = '';
+                        }, 50);
+                    }
+                };
+                this.on('fullscreenchange', updateSubtitles);
+                // Function to toggle subtitle visibility
+                function toggleSubtitles(show) {
+                    const tracks = this.textTracks();
+                    for (let i = 0; i < tracks.length; i++) {
+                        const track = tracks[i];
+                        if (track.kind === 'subtitles' || track.kind === 'captions') {
+                            track.mode = show ? 'showing' : 'hidden';
+                        }
+                    }
+                }
+                // Hide subtitles initially
+                toggleSubtitles.call(this, false);
+                // Show subtitles when video starts playing
+                this.on('play', () => {
+                    toggleSubtitles.call(this, true);
+                });
+                // Hide subtitles when video ends
+                this.on('ended', () => {
+                    toggleSubtitles.call(this, false);
+                });
+                // Ensure subtitles are visible when video is embedded or loaded
+                this.on('loadedmetadata', () => {
+                    const tracks = this.textTracks();
+                    for (let i = 0; i < tracks.length; i++) {
+                        const track = tracks[i];
+                        if (track.kind === 'subtitles' || track.kind === 'captions') {
+                            track.mode = 'showing';
+                        }
+                    }
+                    updateSubtitles();
+                });
+                // Additional check for subtitle visibility after play starts
+                this.on('play', () => {
+                    setTimeout(updateSubtitles, 500);
+                });
+                // Reposition subtitles on resize
+                this.on('resize', updateSubtitles);
+            });
+
+            if (document.querySelector('.end-thumbnail')) {
+                document.querySelector('.end-thumbnail').addEventListener('click', () => {
+                    player.currentTime(0)
+                    document.querySelector('.end-thumbnail')?.classList.remove('visible')
+                    player.play()
+                })
+            }
+
+            if ('0' === '1') {
+                const passwordForm = document.getElementById('password-form');
+                const token = localStorage.getItem('video_access_token_16912');
+
+                if (token) {
+                    fetch('https://app.vidzflow.com/videos/16912/check-token?token=' + token, {
+                        method: 'GET',
+                        credentials: 'include'
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.valid) {
+                                passwordForm.style.display = 'none';
+                                player.show();
+                            } else {
+                                localStorage.removeItem('video_access_token_16912');
+                                player.hide();
+                                passwordForm.style.display = 'flex';
+                            }
+                        })
+                        .catch(error => {
+                            player.hide();
+                            passwordForm.style.display = 'flex';
+                        });
+                } else {
+                    player.hide();
+                    passwordForm.style.display = 'flex';
+                }
+            } else {
+                player.show();
+            }
+
+            // Function to show/hide play buttons based on player state, controls, and form visibility
+            function updatePlayButtons() {
+                const isPlaying = !player.paused();
+                const isMobile = window.innerWidth <= 767; // Define mobile breakpoint
+                const isFormVisible = document.querySelector('.video-form') && document.querySelector('.video-form')
+                    .style.display !== 'none';
+
+                // Update default big play button
+                const bigPlayButton = player.el().querySelector('.vjs-big-play-button');
+                if (bigPlayButton) {
+                    bigPlayButton.style.display =
+                        'none'; // Always hide the default big play button if custom buttons are set
+                }
+
+                const hasCustomButton = typeof customButtonWrapper !== 'undefined';
+                const hasCustomMobileButton = typeof customMobileButtonWrapper !== 'undefined';
+
+                if (hasCustomButton && hasCustomMobileButton) {
+                    // Both custom buttons are present
+                    customButtonWrapper.style.display = isPlaying || isMobile || isFormVisible ? 'none' : 'flex';
+                    customMobileButtonWrapper.style.display = isPlaying || !isMobile || isFormVisible ? 'none' :
+                        'flex';
+                } else if (hasCustomButton) {
+                    // Only desktop custom button is present
+                    customButtonWrapper.style.display = isPlaying || isFormVisible ? 'none' : 'flex';
+                } else if (hasCustomMobileButton) {
+                    // Only mobile custom button is present
+                    customMobileButtonWrapper.style.display = isPlaying || isFormVisible ? 'none' : 'flex';
+                } else if (bigPlayButton) {
+                    // No custom buttons, show default big play button
+                    bigPlayButton.style.display = isPlaying ? 'none' : 'block';
+                }
+
+                const playTextElement = document.querySelector('.custom-play-text');
+                if (playTextElement) {
+                    const showPlayText = !isPlaying && typeof customButtonWrapper === 'undefined' && typeof customMobileButtonWrapper === 'undefined';
+                    playTextElement.style.display = showPlayText ? 'block' : 'none';
+                }
+            }
+
+            // Show/hide CTA based on video time
+            player.on('timeupdate', () => {
+                            });
+
+            player.on('fullscreenchange', function () {
+                if (player.isFullscreen() && options.playFromStartFullscreen) {
+                    player.currentTime(0);
+                }
+            });
+
+            
+            // Add custom play button if specified
+            
+            // Add custom mobile play button if specified
+            
+            
+            // Update play buttons on play and pause events
+            player.on('play', updatePlayButtons);
+            player.on('pause', updatePlayButtons);
+
+            // Initial update of play buttons
+            updatePlayButtons();
+
+            // Add a resize event listener to handle responsive behavior
+            window.addEventListener('resize', updatePlayButtons);
+
+            // Add an event listener to update play buttons when the form is shown/hidden
+            const observer = new MutationObserver(updatePlayButtons);
+            const formElement = document.querySelector('.video-form');
+            if (formElement) {
+                observer.observe(formElement, {
+                    attributes: true,
+                    attributeFilter: ['style']
+                });
+            }
+
+            // Handle messages from parent window
+            window.addEventListener('message', ({
+                data
+            }) => {
+                const eventType = typeof data === 'string' ? data : data.type;
+
+                switch (eventType) {
+                    case 'playerPlay':
+                        player.play();
+                        break;
+                    case 'playerPause':
+                        player.pause();
+                        break;
+                    case 'playerStop':
+                        player.hasStarted(false);
+                        player.currentTime(0);
+                        player.pause();
+                        break;
+                    case 'playerMute':
+                        player.volume(0);
+                        break;
+                    case 'playerUnmute':
+                        player.volume(1);
+                        break;
+                    case 'playerFullscreen':
+                        player.requestFullscreen();
+                        break;
+                    case 'playerExitFullscreen':
+                        player.exitFullscreen();
+                        break;
+                    case 'playerSeek':
+                        if (data.time !== undefined) {
+                            player.currentTime(data.time);
+                        }
+                        break;
+                    case 'playerVolume':
+                        if (data.volume !== undefined) {
+                            player.volume(data.volume);
+                        }
+                        break;
+                    default:
+                        console.warn('Unknown event type:', eventType);
+                }
+            });
+
+            // Add chapter markers if chapters are defined
+            var chapters = 
+
+            player.on("loadedmetadata", function () {
+                if (chapters && chapters.length > 0) {
+                    var total = player.duration();
+                    var progressHolder = document.querySelector(
+                        ".video-js .vjs-progress-control .vjs-progress-holder");
+                    var progressBar = progressHolder.querySelector(".vjs-progress");
+
+                    for (var i = 0; i < chapters.length; i++) {
+                        var start = chapters[i].start;
+                        var end = Math.min(chapters[i].end, total);
+                        var left = (start / total * 100) + '%';
+                        var width = ((end - start) / total * 100) + '%';
+                        var el = document.createElement("div");
+                        el.classList.add("vjs-chapter-marker");
+                        el.style.left = left;
+                        el.style.width = width;
+                        el.innerHTML = '<span>' + chapters[i].label + '</span>';
+
+                        el.addEventListener("click", function () {
+                            player.currentTime = parseFloat(chapters[i].start);
+                        });
+
+                        progressHolder.appendChild(el);
+                    }
+                }
+            });
+
+            // Notify parent window when video is ready
+            player.ready(function () {
+                window.parent.postMessage({
+                    eventType: 'videoReady',
+                    videoId: 16912
+                }, "*");
+            });
+
+            // Show form on video end if configured
+            
+            // Analytics collection
+            
+            player.on('ended', () => {
+                document.querySelector('.end-thumbnail')?.classList.add('visible')
+                window.parent.postMessage({
+                    eventType: 'videoEnded',
+                    videoId: 16912
+                }, "*")
+            })
+
+            player.on('loadedmetadata', function () { });
+        })
+    </script>
+
+    <link href="./modern-normalize.min.css" rel="stylesheet">
+    
+
+    <title>Gk Vid 1</title>
+    <meta name="title" content="Gk Vid 1">
+    <meta name="description" content="">
+
+    <meta property="og:type" content="video">
+    <meta property="og:title" content="Gk Vid 1">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://r2.vidzflow.com/https://r2.vidzflow.com/thumbnails/yAzZqp7Nfe_1726045660.jpg">
+
+    <meta property="twitter:title" content="Gk Vid 1">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="https://r2.vidzflow.com/https://r2.vidzflow.com/thumbnails/yAzZqp7Nfe_1726045660.jpg">
+</head>
+
+<body class="aspect-ratio-1.82758621">
+    
+                    <video-js id="vidzflow-player" class="video-js vjs-paused vjs-fluid vidzflow-player-dimensions vjs-controls-enabled vjs-workinghover vjs-v8 vjs-user-active vjs-layout-large" oncontextmenu="return false;" poster="https://r2.vidzflow.com/thumbnails/yAzZqp7Nfe_1726045660.jpg" disableremoteplayback="" tabindex="-1" role="region" lang="en" translate="no" aria-label="Video Player"><video tabindex="-1" role="application" disableremoteplayback="" poster="https://r2.vidzflow.com/thumbnails/yAzZqp7Nfe_1726045660.jpg" oncontextmenu="return false;" class="vjs-tech" id="vidzflow-player_html5_api" preload="metadata" src="https://r2.vidzflow.com/v/yAzZqp7Nfe_576p_1726045671.mp4">
+
+                                    <source src="https://r2.vidzflow.com/v/yAzZqp7Nfe_576p_1726045671.mp4" type="video/mp4" size="576" label="576p">
+                    
+                    <source src="https://r2.vidzflow.com/source/hgnP9eeeDqb8q4IH9Tai4Tzv4r7x7DAc2A12p952.mp4" type="video/mp4" size="★" label="★">
+        
+                <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank" class="vjs-hidden" hidden="hidden">
+                supports HTML5 video
+            </a>
+        </p></video>
+    <div class="vjs-poster" aria-disabled="false"><picture class="vjs-poster" tabindex="-1"><img loading="lazy" alt="" src="./yAzZqp7Nfe_1726045660.jpg"></picture></div><div class="vjs-title-bar vjs-hidden"><div class="vjs-title-bar-title" id="vjs-title-bar-title-29"></div><div class="vjs-title-bar-description" id="vjs-title-bar-description-30"></div></div><div class="vjs-text-track-display" translate="yes" aria-live="off" aria-atomic="true"><div style="position: absolute; inset: 0px; margin: 1.5%;"></div></div><div class="vjs-loading-spinner" dir="ltr"><span class="vjs-control-text">Video Player is loading.</span></div><button class="vjs-big-play-button" type="button" title="Play Video" aria-disabled="false" style="display: block;"><span class="vjs-icon-placeholder" aria-hidden="true"></span><span class="vjs-control-text" aria-live="polite">Play Video</span></button><div class="vjs-control-bar" dir="ltr"><button class="vjs-play-control vjs-control vjs-button" type="button" title="Play" aria-disabled="false"><span class="vjs-icon-placeholder" aria-hidden="true"></span><span class="vjs-control-text" aria-live="polite">Play</span></button><div class="vjs-progress-control vjs-control"><div tabindex="0" class="vjs-progress-holder vjs-slider vjs-slider-horizontal" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progress Bar"><div class="vjs-load-progress"><span class="vjs-control-text"><span>Loaded</span>: <span class="vjs-control-text-loaded-percentage">0%</span></span></div><div class="vjs-mouse-display"><div class="vjs-time-tooltip" aria-hidden="true"></div></div><div class="vjs-play-progress vjs-slider-bar" aria-hidden="true"><div class="vjs-time-tooltip" aria-hidden="true"></div></div></div></div><div class="vjs-remaining-time vjs-time-control vjs-control"><span class="vjs-control-text" role="presentation">Remaining Time&nbsp;</span><span aria-hidden="true">-</span><span class="vjs-remaining-time-display" role="presentation"></span></div><div class="vjs-volume-panel vjs-control vjs-volume-panel-horizontal"><button class="vjs-mute-control vjs-control vjs-button vjs-vol-3" type="button" title="Mute" aria-disabled="false"><span class="vjs-icon-placeholder" aria-hidden="true"></span><span class="vjs-control-text" aria-live="polite">Mute</span></button><div class="vjs-volume-control vjs-control vjs-volume-horizontal"><div tabindex="0" class="vjs-volume-bar vjs-slider-bar vjs-slider vjs-slider-horizontal" role="slider" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Volume Level" aria-live="polite" aria-valuetext="100%"><div class="vjs-mouse-display"><div class="vjs-volume-tooltip" aria-hidden="true"></div></div><div class="vjs-volume-level"><span class="vjs-control-text"></span></div></div></div></div><div class="vjs-playback-rate vjs-menu-button vjs-menu-button-popup vjs-control vjs-button"><div class="vjs-playback-rate-value" id="vjs-playback-rate-value-label-vidzflow-player_component_218">1x</div><button class="vjs-playback-rate vjs-menu-button vjs-menu-button-popup vjs-button" type="button" aria-disabled="false" title="Playback Rate" aria-haspopup="true" aria-expanded="false" aria-describedby="vjs-playback-rate-value-label-vidzflow-player_component_218"><span class="vjs-icon-placeholder" aria-hidden="true"></span><span class="vjs-control-text" aria-live="polite">Playback Rate</span></button><div class="vjs-menu"><ul class="vjs-menu-content" role="menu"><li class="vjs-menu-item" tabindex="-1" role="menuitemradio" aria-disabled="false" aria-checked="false"><span class="vjs-menu-item-text">2x</span><span class="vjs-control-text" aria-live="polite"></span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemradio" aria-disabled="false" aria-checked="false"><span class="vjs-menu-item-text">1.5x</span><span class="vjs-control-text" aria-live="polite"></span></li><li class="vjs-menu-item vjs-selected" tabindex="-1" role="menuitemradio" aria-disabled="false" aria-checked="true"><span class="vjs-menu-item-text">1x</span><span class="vjs-control-text" aria-live="polite">, selected</span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemradio" aria-disabled="false" aria-checked="false"><span class="vjs-menu-item-text">0.5x</span><span class="vjs-control-text" aria-live="polite"></span></li></ul></div></div><div class="vjs-quality-selector vjs-menu-button vjs-menu-button-popup vjs-control vjs-button"><button class="vjs-menu-button vjs-menu-button-popup vjs-button" type="button" aria-disabled="false" aria-haspopup="true" aria-expanded="false" title="Open quality selector menu"><span class="vjs-icon-placeholder" aria-hidden="true"></span><span class="vjs-control-text" aria-live="polite">Open quality selector menu</span></button><div class="vjs-menu"><ul class="vjs-menu-content" role="menu"><li class="vjs-menu-item vjs-selected" tabindex="-1" role="menuitemradio" aria-disabled="false" aria-checked="true"><span class="vjs-menu-item-text">576p</span><span class="vjs-control-text" aria-live="polite">, selected</span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemradio" aria-disabled="false" aria-checked="false"><span class="vjs-menu-item-text">★</span><span class="vjs-control-text" aria-live="polite"></span></li></ul></div></div><button class="vjs-fullscreen-control vjs-control vjs-button" type="button" title="Fullscreen" aria-disabled="false"><span class="vjs-icon-placeholder" aria-hidden="true"></span><span class="vjs-control-text" aria-live="polite">Fullscreen</span></button></div><div class="vjs-error-display vjs-modal-dialog vjs-hidden " tabindex="-1" aria-describedby="vidzflow-player_component_369_description" aria-hidden="true" aria-label="Modal Window" role="dialog"><p class="vjs-modal-dialog-description vjs-control-text" id="vidzflow-player_component_369_description">This is a modal window.</p><div class="vjs-modal-dialog-content" role="document"></div></div><div class="vjs-modal-dialog vjs-hidden  vjs-text-track-settings" tabindex="-1" aria-describedby="vidzflow-player_component_375_description" aria-hidden="true" aria-label="Caption Settings Dialog" role="dialog"><p class="vjs-modal-dialog-description vjs-control-text" id="vidzflow-player_component_375_description">Beginning of dialog window. Escape will cancel and close the window.</p><div class="vjs-modal-dialog-content" role="document"><div class="vjs-track-settings-colors"><fieldset class="vjs-fg vjs-track-setting"><legend id="captions-text-legend-vidzflow-player_component_375">Text</legend><span class="vjs-text-color"><label id="captions-foreground-color-vidzflow-player_component_375" class="vjs-label">Color</label><select aria-labelledby="captions-text-legend-vidzflow-player_component_375 captions-foreground-color-vidzflow-player_component_375"><option id="captions-foreground-color-vidzflow-player_component_375-White" value="#FFF" aria-labelledby="captions-text-legend-vidzflow-player_component_375 captions-foreground-color-vidzflow-player_component_375 captions-foreground-color-vidzflow-player_component_375-White">White</option><option id="captions-foreground-color-vidzflow-player_component_375-Black" value="#000" aria-labelledby="captions-text-legend-vidzflow-player_component_375 captions-foreground-color-vidzflow-player_component_375 captions-foreground-color-vidzflow-player_component_375-Black">Black</option><option id="captions-foreground-color-vidzflow-player_component_375-Red" value="#F00" aria-labelledby="captions-text-legend-vidzflow-player_component_375 captions-foreground-color-vidzflow-player_component_375 captions-foreground-color-vidzflow-player_component_375-Red">Red</option><option id="captions-foreground-color-vidzflow-player_component_375-Green" value="#0F0" aria-labelledby="captions-text-legend-vidzflow-player_component_375 captions-foreground-color-vidzflow-player_component_375 captions-foreground-color-vidzflow-player_component_375-Green">Green</option><option id="captions-foreground-color-vidzflow-player_component_375-Blue" value="#00F" aria-labelledby="captions-text-legend-vidzflow-player_component_375 captions-foreground-color-vidzflow-player_component_375 captions-foreground-color-vidzflow-player_component_375-Blue">Blue</option><option id="captions-foreground-color-vidzflow-player_component_375-Yellow" value="#FF0" aria-labelledby="captions-text-legend-vidzflow-player_component_375 captions-foreground-color-vidzflow-player_component_375 captions-foreground-color-vidzflow-player_component_375-Yellow">Yellow</option><option id="captions-foreground-color-vidzflow-player_component_375-Magenta" value="#F0F" aria-labelledby="captions-text-legend-vidzflow-player_component_375 captions-foreground-color-vidzflow-player_component_375 captions-foreground-color-vidzflow-player_component_375-Magenta">Magenta</option><option id="captions-foreground-color-vidzflow-player_component_375-Cyan" value="#0FF" aria-labelledby="captions-text-legend-vidzflow-player_component_375 captions-foreground-color-vidzflow-player_component_375 captions-foreground-color-vidzflow-player_component_375-Cyan">Cyan</option></select></span><span class="vjs-text-opacity vjs-opacity"><label id="captions-foreground-opacity-vidzflow-player_component_375" class="vjs-label">Opacity</label><select aria-labelledby="captions-text-legend-vidzflow-player_component_375 captions-foreground-opacity-vidzflow-player_component_375"><option id="captions-foreground-opacity-vidzflow-player_component_375-Opaque" value="1" aria-labelledby="captions-text-legend-vidzflow-player_component_375 captions-foreground-opacity-vidzflow-player_component_375 captions-foreground-opacity-vidzflow-player_component_375-Opaque">Opaque</option><option id="captions-foreground-opacity-vidzflow-player_component_375-SemiTransparent" value="0.5" aria-labelledby="captions-text-legend-vidzflow-player_component_375 captions-foreground-opacity-vidzflow-player_component_375 captions-foreground-opacity-vidzflow-player_component_375-SemiTransparent">Semi-Transparent</option></select></span></fieldset><fieldset class="vjs-bg vjs-track-setting"><legend id="captions-background-vidzflow-player_component_375">Text Background</legend><span class="vjs-bg-color"><label id="captions-background-color-vidzflow-player_component_375" class="vjs-label">Color</label><select aria-labelledby="captions-background-vidzflow-player_component_375 captions-background-color-vidzflow-player_component_375"><option id="captions-background-color-vidzflow-player_component_375-Black" value="#000" aria-labelledby="captions-background-vidzflow-player_component_375 captions-background-color-vidzflow-player_component_375 captions-background-color-vidzflow-player_component_375-Black">Black</option><option id="captions-background-color-vidzflow-player_component_375-White" value="#FFF" aria-labelledby="captions-background-vidzflow-player_component_375 captions-background-color-vidzflow-player_component_375 captions-background-color-vidzflow-player_component_375-White">White</option><option id="captions-background-color-vidzflow-player_component_375-Red" value="#F00" aria-labelledby="captions-background-vidzflow-player_component_375 captions-background-color-vidzflow-player_component_375 captions-background-color-vidzflow-player_component_375-Red">Red</option><option id="captions-background-color-vidzflow-player_component_375-Green" value="#0F0" aria-labelledby="captions-background-vidzflow-player_component_375 captions-background-color-vidzflow-player_component_375 captions-background-color-vidzflow-player_component_375-Green">Green</option><option id="captions-background-color-vidzflow-player_component_375-Blue" value="#00F" aria-labelledby="captions-background-vidzflow-player_component_375 captions-background-color-vidzflow-player_component_375 captions-background-color-vidzflow-player_component_375-Blue">Blue</option><option id="captions-background-color-vidzflow-player_component_375-Yellow" value="#FF0" aria-labelledby="captions-background-vidzflow-player_component_375 captions-background-color-vidzflow-player_component_375 captions-background-color-vidzflow-player_component_375-Yellow">Yellow</option><option id="captions-background-color-vidzflow-player_component_375-Magenta" value="#F0F" aria-labelledby="captions-background-vidzflow-player_component_375 captions-background-color-vidzflow-player_component_375 captions-background-color-vidzflow-player_component_375-Magenta">Magenta</option><option id="captions-background-color-vidzflow-player_component_375-Cyan" value="#0FF" aria-labelledby="captions-background-vidzflow-player_component_375 captions-background-color-vidzflow-player_component_375 captions-background-color-vidzflow-player_component_375-Cyan">Cyan</option></select></span><span class="vjs-bg-opacity vjs-opacity"><label id="captions-background-opacity-vidzflow-player_component_375" class="vjs-label">Opacity</label><select aria-labelledby="captions-background-vidzflow-player_component_375 captions-background-opacity-vidzflow-player_component_375"><option id="captions-background-opacity-vidzflow-player_component_375-Opaque" value="1" aria-labelledby="captions-background-vidzflow-player_component_375 captions-background-opacity-vidzflow-player_component_375 captions-background-opacity-vidzflow-player_component_375-Opaque">Opaque</option><option id="captions-background-opacity-vidzflow-player_component_375-SemiTransparent" value="0.5" aria-labelledby="captions-background-vidzflow-player_component_375 captions-background-opacity-vidzflow-player_component_375 captions-background-opacity-vidzflow-player_component_375-SemiTransparent">Semi-Transparent</option><option id="captions-background-opacity-vidzflow-player_component_375-Transparent" value="0" aria-labelledby="captions-background-vidzflow-player_component_375 captions-background-opacity-vidzflow-player_component_375 captions-background-opacity-vidzflow-player_component_375-Transparent">Transparent</option></select></span></fieldset><fieldset class="vjs-window vjs-track-setting"><legend id="captions-window-vidzflow-player_component_375">Caption Area Background</legend><span class="vjs-window-color"><label id="captions-window-color-vidzflow-player_component_375" class="vjs-label">Color</label><select aria-labelledby="captions-window-vidzflow-player_component_375 captions-window-color-vidzflow-player_component_375"><option id="captions-window-color-vidzflow-player_component_375-Black" value="#000" aria-labelledby="captions-window-vidzflow-player_component_375 captions-window-color-vidzflow-player_component_375 captions-window-color-vidzflow-player_component_375-Black">Black</option><option id="captions-window-color-vidzflow-player_component_375-White" value="#FFF" aria-labelledby="captions-window-vidzflow-player_component_375 captions-window-color-vidzflow-player_component_375 captions-window-color-vidzflow-player_component_375-White">White</option><option id="captions-window-color-vidzflow-player_component_375-Red" value="#F00" aria-labelledby="captions-window-vidzflow-player_component_375 captions-window-color-vidzflow-player_component_375 captions-window-color-vidzflow-player_component_375-Red">Red</option><option id="captions-window-color-vidzflow-player_component_375-Green" value="#0F0" aria-labelledby="captions-window-vidzflow-player_component_375 captions-window-color-vidzflow-player_component_375 captions-window-color-vidzflow-player_component_375-Green">Green</option><option id="captions-window-color-vidzflow-player_component_375-Blue" value="#00F" aria-labelledby="captions-window-vidzflow-player_component_375 captions-window-color-vidzflow-player_component_375 captions-window-color-vidzflow-player_component_375-Blue">Blue</option><option id="captions-window-color-vidzflow-player_component_375-Yellow" value="#FF0" aria-labelledby="captions-window-vidzflow-player_component_375 captions-window-color-vidzflow-player_component_375 captions-window-color-vidzflow-player_component_375-Yellow">Yellow</option><option id="captions-window-color-vidzflow-player_component_375-Magenta" value="#F0F" aria-labelledby="captions-window-vidzflow-player_component_375 captions-window-color-vidzflow-player_component_375 captions-window-color-vidzflow-player_component_375-Magenta">Magenta</option><option id="captions-window-color-vidzflow-player_component_375-Cyan" value="#0FF" aria-labelledby="captions-window-vidzflow-player_component_375 captions-window-color-vidzflow-player_component_375 captions-window-color-vidzflow-player_component_375-Cyan">Cyan</option></select></span><span class="vjs-window-opacity vjs-opacity"><label id="captions-window-opacity-vidzflow-player_component_375" class="vjs-label">Opacity</label><select aria-labelledby="captions-window-vidzflow-player_component_375 captions-window-opacity-vidzflow-player_component_375"><option id="captions-window-opacity-vidzflow-player_component_375-Transparent" value="0" aria-labelledby="captions-window-vidzflow-player_component_375 captions-window-opacity-vidzflow-player_component_375 captions-window-opacity-vidzflow-player_component_375-Transparent">Transparent</option><option id="captions-window-opacity-vidzflow-player_component_375-SemiTransparent" value="0.5" aria-labelledby="captions-window-vidzflow-player_component_375 captions-window-opacity-vidzflow-player_component_375 captions-window-opacity-vidzflow-player_component_375-SemiTransparent">Semi-Transparent</option><option id="captions-window-opacity-vidzflow-player_component_375-Opaque" value="1" aria-labelledby="captions-window-vidzflow-player_component_375 captions-window-opacity-vidzflow-player_component_375 captions-window-opacity-vidzflow-player_component_375-Opaque">Opaque</option></select></span></fieldset></div><div class="vjs-track-settings-font"><fieldset class="vjs-font-percent vjs-track-setting"><legend id="captions-font-size-vidzflow-player_component_375" class="">Font Size</legend><select aria-labelledby="captions-font-size-vidzflow-player_component_375"><option id="captions-font-size-vidzflow-player_component_375-50" value="0.50" aria-labelledby="captions-font-size-vidzflow-player_component_375 captions-font-size-vidzflow-player_component_375-50">50%</option><option id="captions-font-size-vidzflow-player_component_375-75" value="0.75" aria-labelledby="captions-font-size-vidzflow-player_component_375 captions-font-size-vidzflow-player_component_375-75">75%</option><option id="captions-font-size-vidzflow-player_component_375-100" value="1.00" aria-labelledby="captions-font-size-vidzflow-player_component_375 captions-font-size-vidzflow-player_component_375-100">100%</option><option id="captions-font-size-vidzflow-player_component_375-125" value="1.25" aria-labelledby="captions-font-size-vidzflow-player_component_375 captions-font-size-vidzflow-player_component_375-125">125%</option><option id="captions-font-size-vidzflow-player_component_375-150" value="1.50" aria-labelledby="captions-font-size-vidzflow-player_component_375 captions-font-size-vidzflow-player_component_375-150">150%</option><option id="captions-font-size-vidzflow-player_component_375-175" value="1.75" aria-labelledby="captions-font-size-vidzflow-player_component_375 captions-font-size-vidzflow-player_component_375-175">175%</option><option id="captions-font-size-vidzflow-player_component_375-200" value="2.00" aria-labelledby="captions-font-size-vidzflow-player_component_375 captions-font-size-vidzflow-player_component_375-200">200%</option><option id="captions-font-size-vidzflow-player_component_375-300" value="3.00" aria-labelledby="captions-font-size-vidzflow-player_component_375 captions-font-size-vidzflow-player_component_375-300">300%</option><option id="captions-font-size-vidzflow-player_component_375-400" value="4.00" aria-labelledby="captions-font-size-vidzflow-player_component_375 captions-font-size-vidzflow-player_component_375-400">400%</option></select></fieldset><fieldset class="vjs-edge-style vjs-track-setting"><legend id="vidzflow-player_component_375" class="">Text Edge Style</legend><select aria-labelledby="vidzflow-player_component_375"><option id="vidzflow-player_component_375-None" value="none" aria-labelledby="vidzflow-player_component_375 vidzflow-player_component_375-None">None</option><option id="vidzflow-player_component_375-Raised" value="raised" aria-labelledby="vidzflow-player_component_375 vidzflow-player_component_375-Raised">Raised</option><option id="vidzflow-player_component_375-Depressed" value="depressed" aria-labelledby="vidzflow-player_component_375 vidzflow-player_component_375-Depressed">Depressed</option><option id="vidzflow-player_component_375-Uniform" value="uniform" aria-labelledby="vidzflow-player_component_375 vidzflow-player_component_375-Uniform">Uniform</option><option id="vidzflow-player_component_375-Dropshadow" value="dropshadow" aria-labelledby="vidzflow-player_component_375 vidzflow-player_component_375-Dropshadow">Drop shadow</option></select></fieldset><fieldset class="vjs-font-family vjs-track-setting"><legend id="captions-font-family-vidzflow-player_component_375" class="">Font Family</legend><select aria-labelledby="captions-font-family-vidzflow-player_component_375"><option id="captions-font-family-vidzflow-player_component_375-ProportionalSansSerif" value="proportionalSansSerif" aria-labelledby="captions-font-family-vidzflow-player_component_375 captions-font-family-vidzflow-player_component_375-ProportionalSansSerif">Proportional Sans-Serif</option><option id="captions-font-family-vidzflow-player_component_375-MonospaceSansSerif" value="monospaceSansSerif" aria-labelledby="captions-font-family-vidzflow-player_component_375 captions-font-family-vidzflow-player_component_375-MonospaceSansSerif">Monospace Sans-Serif</option><option id="captions-font-family-vidzflow-player_component_375-ProportionalSerif" value="proportionalSerif" aria-labelledby="captions-font-family-vidzflow-player_component_375 captions-font-family-vidzflow-player_component_375-ProportionalSerif">Proportional Serif</option><option id="captions-font-family-vidzflow-player_component_375-MonospaceSerif" value="monospaceSerif" aria-labelledby="captions-font-family-vidzflow-player_component_375 captions-font-family-vidzflow-player_component_375-MonospaceSerif">Monospace Serif</option><option id="captions-font-family-vidzflow-player_component_375-Casual" value="casual" aria-labelledby="captions-font-family-vidzflow-player_component_375 captions-font-family-vidzflow-player_component_375-Casual">Casual</option><option id="captions-font-family-vidzflow-player_component_375-Script" value="script" aria-labelledby="captions-font-family-vidzflow-player_component_375 captions-font-family-vidzflow-player_component_375-Script">Script</option><option id="captions-font-family-vidzflow-player_component_375-SmallCaps" value="small-caps" aria-labelledby="captions-font-family-vidzflow-player_component_375 captions-font-family-vidzflow-player_component_375-SmallCaps">Small Caps</option></select></fieldset></div><div class="vjs-track-settings-controls"><button type="button" class="vjs-default-button" title="restore all settings to the default values">Reset<span class="vjs-control-text"> restore all settings to the default values</span></button><button type="button" class="vjs-done-button">Done</button></div></div><button class="vjs-close-button vjs-control vjs-button" type="button" title="Close Modal Dialog" aria-disabled="false"><span class="vjs-icon-placeholder" aria-hidden="true"></span><span class="vjs-control-text" aria-live="polite">Close Modal Dialog</span></button><p class="vjs-control-text">End of dialog window.</p></div></video-js>
+
+
+
+</body></html>
