@@ -12,6 +12,7 @@ nav {
     justify-content: center;
     padding: 10px;
     gap: 20px;
+    flex-wrap: wrap; 
 }
 
 nav a {
@@ -22,6 +23,7 @@ nav a {
 
 .content {
     display: flex;
+    
     justify-content: center;
     align-items: center;
     padding: 40px 20px 10px;
@@ -39,33 +41,25 @@ nav a {
 }
 
 .troll-face {
-    width: 500px;
+    width: 100%; /* Đảm bảo hình ảnh co giãn theo màn hình */
+    max-width: 500px; /* Giới hạn kích thước tối đa */
     height: auto;
 }
-
 .icons {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
     margin-top: 20px;
-    
-    
+    flex-wrap: wrap; /* Cho phép biểu tượng xuống dòng trên màn hình nhỏ */
 }
 
-.icon  {
-    width: 60px;
-    height: 60px;
+.icon {
+    width: 50px; /* Giảm kích thước biểu tượng trên màn hình nhỏ */
+    height: 50px;
     filter: invert(1);
-    
-
-}
-.icon a img {
-    background-color: #007bff; /* Màu xanh */
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px
 }
 
+/* Ví */
 .wallet {
     background: #2d3531;
     color: #90ee90;
@@ -73,14 +67,17 @@ nav a {
     margin: 20px auto;
     display: inline-block;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 12px; /* Giảm kích thước chữ trên màn hình nhỏ */
 }
 
+/* Hình ảnh dưới cùng */
 .bottom-img {
-    width: 500px;
+    width: 100%; /* Đảm bảo hình ảnh co giãn theo màn hình */
+    max-width: 500px;
     margin: 30px auto 50px;
 }
 
+/* Nút Chart */
 .chart-button {
     margin: 40px 0 20px;
 }
@@ -88,9 +85,9 @@ nav a {
 .chart-button a {
     background-color: white;
     color: black;
-    padding: 10px 40px;
+    padding: 10px 20px; /* Giảm padding trên màn hình nhỏ */
     font-family: 'Press Start 2P', monospace;
-    font-size: 1.2rem;
+    font-size: 1rem; /* Giảm kích thước chữ */
     text-decoration: none;
     display: inline-block;
     border-radius: 5px;
@@ -101,12 +98,38 @@ nav a {
     transform: scale(1.05);
 }
 
+/* Mô tả */
 .description {
     color: white;
     text-align: center;
     font-family: 'Press Start 2P', monospace;
-    font-size: 10px;
-    max-width: 700px;
+    font-size: 8px; /* Giảm kích thước chữ trên màn hình nhỏ */
+    max-width: 90%; /* Đảm bảo nội dung không vượt quá màn hình */
     margin: 0 auto 60px;
     line-height: 1.6;
+}
+
+/* Media Queries cho màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+    .text-section h1 {
+        font-size: 40px; /* Giảm kích thước chữ tiêu đề */
+    }
+
+    .icons {
+        gap: 10px; /* Giảm khoảng cách giữa các biểu tượng */
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .chart-button a {
+        padding: 8px 16px; /* Giảm padding nút */
+        font-size: 0.9rem;
+    }
+
+    .description {
+        font-size: 9px; /* Giảm kích thước chữ mô tả */
+    }
 }
