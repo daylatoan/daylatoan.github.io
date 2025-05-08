@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRUMP DOG</title>
+  <link rel="stylesheet" href="stylets.css">
+  link Icon
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Background with American theme -->
+  <div class="background-overlay"></div>
+  <div class="stars"></div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="./drive-download-20250508T150310Z-001/AVT (14).png" alt="America XRPL Logo" class="logo">
+      </div>
+      <div class="nav-links">
+        <a href="#about">ABOUT US</a>
+
+        <a href="#tokenomics">TOKENOMICS</a>
+
+      </div>
+      <div class="social-icons">
+        <a href="#T" class="social-icon telegram"><i class="fab fa-telegram"></i></a>
+        <a href="https://x.com/TrumpDog_OnSol" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon dex"><i class="fas fa-chart-line"></i></a>
+        <a href="#" class="buy-button">BUY</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">TRUMP DOG</h1>
+
+        <!-- Trump Dog Section -->
+        <div class="trump-dog-section">
+          <div class="trump-dog-container">
+            <img src="./drive-download-20250508T150310Z-001/Gif.gif" alt="Trump Dog Logo" class="trump-dog-logo">
+            <h2 class="trump-dog-title">TRUMP DOG</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <!-- Animated Banner -->
+      <div class="banner-container">
+        <div class="section-banner">
+          <div class="banner-content">
+            <img src="./drive-download-20250508T150310Z-001/Logo (13).png" alt="Eagle Icon" class="banner-icon">
+            <div class="banner-text">$TRUMPD</div>
+            <img src="./drive-download-20250508T150310Z-001/Logo (13).png" alt="Eagle Icon" class="banner-icon">
+            <div class="banner-text">$TRUMPD</div>
+            <img src="./drive-download-20250508T150310Z-001/Logo (13).png" alt="Eagle Icon" class="banner-icon">
+            <div class="banner-text">$TRUMPD</div>
+            <img src="./drive-download-20250508T150310Z-001/Logo (13).png" alt="Eagle Icon" class="banner-icon">
+            <div class="banner-text">$TRUMPD</div>
+            <img src="./drive-download-20250508T150310Z-001/Logo (13).png" alt="Eagle Icon" class="banner-icon">
+            <div class="banner-text">$TRUMPD</div>
+            <img src="./drive-download-20250508T150310Z-001/Logo (13).png" alt="Eagle Icon" class="banner-icon">
+            <div class="banner-text">$TRUMPD</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <h2 class="section-title">ABOUT US</h2>
+
+        <div class="about-container">
+          <div class="about-image-container">
+            <img src="./drive-download-20250508T150310Z-001/AVT (14).png" alt="Eagle with American Flag" class="about-image">
+          </div>
+
+          <div class="about-text-container">
+            <h3 class="about-subtitle">WHAT IS $TRUMPD?</h3>
+            <div class="divider"></div>
+            <p class="about-description">
+              Our President Donald Trump loves dogs, and he loves Solana too
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contract Address Section -->
+    <section id="contract" class="contract-section">
+      <h2 class="contract-title">CONTRACT ADDRESS</h2>
+      <div class="contract-address-container">
+        <div class="contract-address">UPDATE</div>
+        <button class="copy-button" onclick="copyContractAddress()">
+          <i class="far fa-copy"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Tokenomics Section -->
+    <section id="tokenomics" class="tokenomics-section">
+      <h2 class="section-title">TOKENOMICS</h2>
+
+      <div class="tokenomics-container">
+        <div class="tokenomics-image-container">
+          <img src="./drive-download-20250508T150310Z-001/Banner.gif" alt="Eagle with XRP" class="tokenomics-image">
+        </div>
+
+        <div class="tokenomics-info-container">
+          <div class="info-box">
+            <div class="info-text">CONTRACT</div>
+          </div>
+
+          <div class="info-box">
+            <div class="info-text">LIQUIDITY BURNT <span class="fire-emoji">🔥</span></div>
+          </div>
+
+          <div class="info-box">
+            <div class="info-text">SUPPLY : 1.000.000.000</div>
+          </div>
+
+          <div class="info-box">
+            <div class="info-text">Solana</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js">
+    // Function to copy contract address
+    function copyContractAddress() {
+      const contractAddress = document.querySelector('.contract-address').textContent;
+      navigator.clipboard.writeText(contractAddress)
+        .then(() => {
+          // Show a temporary notification
+          const notification = document.createElement('div');
+          notification.className = 'copy-notification';
+          notification.textContent = 'Address copied to clipboard!';
+          document.body.appendChild(notification);
+
+          // Remove notification after 2 seconds
+          setTimeout(() => {
+            notification.classList.add('fade-out');
+            setTimeout(() => {
+              document.body.removeChild(notification);
+            }, 500);
+          }, 2000);
+        })
+        .catch(err => {
+          console.error('Failed to copy: ', err);
+        });
+    }
+
+    // Add styles for the notification
+    const style = document.createElement('style');
+    style.textContent = `
+    .copy-notification {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        z-index: 1000;
+        transition: opacity 0.5s;
+    }
+    
+    .fade-out {
+        opacity: 0;
+    }
+`;
+    document.head.appendChild(style);
+
+    // Create stars dynamically for American theme
+    document.addEventListener('DOMContentLoaded', function () {
+      // Add random stars to the background
+      const starsContainer = document.querySelector('.stars');
+      if (starsContainer) {
+        for (let i = 0; i < 50; i++) {
+          const star = document.createElement('div');
+          star.className = 'star';
+          star.style.left = `${Math.random() * 100}%`;
+          star.style.top = `${Math.random() * 100}%`;
+          star.style.animationDelay = `${Math.random() * 5}s`;
+          starsContainer.appendChild(star);
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
