@@ -4,7 +4,630 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PACMAN - Crypto Token</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Press Start 2P', cursive;
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* Stars Background */
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .stars::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(#ffff00 1px, transparent 1px);
+      background-size: 50px 50px;
+      opacity: 0.3;
+    }
+
+    /* Game Container */
+    .game-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    .pacman-icon {
+      display: flex;
+      align-items: center;
+    }
+
+    .pacman-icon img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .lives {
+      display: flex;
+      margin-left: 20px;
+    }
+
+    .lives img {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+
+    .score-box {
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 2px solid #ffcc00;
+      border-radius: 10px;
+      padding: 10px 20px;
+      color: #ffcc00;
+      font-size: 18px;
+      text-shadow: 0 0 5px #ffcc00;
+      box-shadow: 0 0 10px #ffcc00;
+    }
+
+    /* Content */
+    .content {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px;
+    }
+
+    .left-section {
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .logo {
+      font-size: 72px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+    }
+
+    .pac {
+      color: #ffff00;
+    }
+
+    .man {
+      color: #ff69b4;
+    }
+
+    .description {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 40px;
+      color: #fff;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .buy-btn,
+    .play-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 16px;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .buy-btn {
+      background-color: #ffff00;
+      color: #000;
+    }
+
+    .buy-btn:hover {
+      background-color: #ffcc00;
+      transform: translateY(-3px);
+    }
+
+    .play-btn {
+      background-color: #00bfff;
+      color: #000;
+    }
+
+    .play-btn:hover {
+      background-color: #0099cc;
+      transform: translateY(-3px);
+    }
+
+    .right-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .game-preview {
+      background-image: url('./$BOOPA\ -\ The\ first\ Dog\ made\ in\ Boop.fun!_files/a2.jpg');
+      width: 100%;
+      height: 300px;
+      border: 2px solid #0000ff;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Pac-Man and Ghosts */
+    .ghost {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .pink-ghost {
+      background-image: url('pink-ghost.png');
+      top: 50px;
+      right: 100px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .blue-ghost {
+      background-image: url('blue-ghost.png');
+      top: 150px;
+      left: 100px;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .orange-ghost {
+      background-image: url('orange-ghost.png');
+      bottom: 50px;
+      right: 50px;
+      animation: float 4.5s ease-in-out infinite;
+    }
+
+    .cyan-ghost {
+      background-image: url('cyan-ghost.png');
+      bottom: 100px;
+      left: 50px;
+      animation: float 3.5s ease-in-out infinite;
+    }
+
+    .pacman-character {
+      width: 50px;
+      height: 50px;
+      background-image: url('pacman.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: chomp 0.5s steps(2) infinite;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background-color: #ffff00;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .dot:nth-child(6) {
+      top: 30%;
+      left: 30%;
+    }
+
+    .dot:nth-child(7) {
+      top: 60%;
+      left: 70%;
+    }
+
+    .dot:nth-child(8) {
+      top: 80%;
+      left: 40%;
+    }
+
+    /* Contract Section */
+    .contract-section {
+      margin-bottom: 50px;
+    }
+
+    .contract-box {
+      background-color: #0a0a2a;
+      border: 2px solid #ffcc00;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .contract-label {
+      color: #ffcc00;
+      font-size: 24px;
+      margin-right: 15px;
+    }
+
+    .contract-address {
+      flex: 1;
+      font-family: monospace;
+      font-size: 16px;
+      color: #fff;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .copy-btn {
+      background-color: #ffcc00;
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .copy-btn:hover {
+      background-color: #ffff00;
+    }
+
+    .copy-icon {
+      margin-left: 10px;
+    }
+
+    /* Features Section */
+    .features-section {
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .features-section h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .yellow-text {
+      color: #ffff00;
+    }
+
+    .white-text {
+      color: #fff;
+    }
+
+    /* Animations */
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    @keyframes chomp {
+      0% {
+        clip-path: circle(50% at 50% 50%);
+      }
+
+      50% {
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0, 50% 50%);
+      }
+
+      100% {
+        clip-path: circle(50% at 50% 50%);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .content {
+        flex-direction: column;
+      }
+
+      .left-section,
+      .right-section {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 30px;
+      }
+
+      .logo {
+        font-size: 48px;
+      }
+
+      .description {
+        font-size: 14px;
+      }
+
+      .game-preview {
+        height: 250px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .buttons {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .buy-btn,
+      .play-btn {
+        width: 100%;
+      }
+
+      .contract-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .contract-address {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .copy-btn {
+        align-self: flex-end;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="stars"></div>
+
+  <div class="game-container">
+    <div class="header">
+      <div class="pacman-icon">
+        <img src="./$BOOPA - The first Dog made in Boop.fun!_files/a1.jpg" alt="Pacman">
+        
+      </div>
+      <div class="score-box">
+        <span>Token: </span>
+        <span id="score">0</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="left-section">
+        <div class="logo">
+          <span class="pac">MW</span><span class="man">G</span>
+        </div>
+        <div class="description">
+          <p>The first crypto token inspired</p>
+          <p>by the legendary arcade game.</p>
+          <p>Built on Solana for speed and</p>
+          <p>efficiency.</p>
+        </div>
+        <div class="buttons">
+          <a href="https://x.com/Mogwizardgork" class="buy-btn">Tiwtter</a>
+          <a href="#" class="play-btn">Telegram</a>
+          
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="game-preview">
+          <div class="ghost pink-ghost"></div>
+          <div class="ghost blue-ghost"></div>
+          <div class="ghost orange-ghost"></div>
+          <div class="ghost cyan-ghost"></div>
+          <div class="pacman-character"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contract-section">
+      <div class="contract-box">
+        <div class="contract-label">CA:</div>
+        <div class="contract-address" id="contractAddress">Update</div>
+        <button class="copy-btn" id="copyBtn">Copy <span class="copy-icon">📋</span></button>
+      </div>
+    </div>
+
+    <div class="features-section">
+      <h2><span class="yellow-text">Mog wizard </span> <span class="white-text">gork</span></h2>
+      <!-- Features content would go here -->
+    </div>
+  </div>
+
+  <script >
+    document.addEventListener('DOMContentLoaded', function () {
+      // Copy contract address functionality
+      const copyBtn = document.getElementById('copyBtn');
+      const contractAddress = document.getElementById('contractAddress');
+
+      copyBtn.addEventListener('click', function () {
+        const tempInput = document.createElement('input');
+        tempInput.value = contractAddress.textContent;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+
+        // Change button text temporarily
+        const originalText = copyBtn.innerHTML;
+        copyBtn.textContent = 'Copied!';
+
+        setTimeout(function () {
+          copyBtn.innerHTML = originalText;
+        }, 2000);
+      });
+
+      // Animate score counter
+      let score = 0;
+      const scoreElement = document.getElementById('score');
+      const maxScore = 100;
+
+      function incrementScore() {
+        if (score < maxScore) {
+          score += 1;
+          scoreElement.textContent = score;
+          setTimeout(incrementScore, 100);
+        }
+      }
+
+      // Start score animation after a delay
+      setTimeout(incrementScore, 1500);
+
+      // Create random dots in the background
+      createRandomDots();
+
+      // Add ghosts that move around randomly
+      animateGhosts();
+    });
+
+    // Create random dots in the background
+    function createRandomDots() {
+      const container = document.querySelector('body');
+      const dotsCount = 50;
+
+      for (let i = 0; i < dotsCount; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'background-dot';
+
+        // Random position
+        const posX = Math.random() * 100;
+        const posY = Math.random() * 100;
+
+        dot.style.cssText = `
+            position: fixed;
+            width: 5px;
+            height: 5px;
+            background-color: #ffff00;
+            border-radius: 50%;
+            left: ${posX}%;
+            top: ${posY}%;
+            opacity: ${Math.random() * 0.5};
+            z-index: -1;
+        `;
+
+        container.appendChild(dot);
+      }
+    }
+
+    // Animate ghosts with random movement
+    function animateGhosts() {
+      const gamePreview = document.querySelector('.game-preview');
+      const ghosts = document.querySelectorAll('.ghost');
+
+      ghosts.forEach(ghost => {
+        moveGhostRandomly(ghost, gamePreview);
+      });
+
+      // Also move Pac-Man
+      const pacman = document.querySelector('.pacman-character');
+      if (pacman) {
+        movePacmanRandomly(pacman, gamePreview);
+      }
+    }
+
+    function moveGhostRandomly(ghost, container) {
+      const maxX = container.clientWidth - ghost.clientWidth;
+      const maxY = container.clientHeight - ghost.clientHeight;
+
+      // Get current position
+      const currentX = parseInt(ghost.style.left) || Math.random() * maxX;
+      const currentY = parseInt(ghost.style.top) || Math.random() * maxY;
+
+      // Generate new target position
+      const targetX = Math.random() * maxX;
+      const targetY = Math.random() * maxY;
+
+      // Calculate duration based on distance
+      const distance = Math.sqrt(Math.pow(targetX - currentX, 2) + Math.pow(targetY - currentY, 2));
+      const duration = distance * 20; // Adjust speed here
+
+      // Animate movement
+      ghost.style.transition = `left ${duration}ms ease, top ${duration}ms ease`;
+      ghost.style.left = `${targetX}px`;
+      ghost.style.top = `${targetY}px`;
+
+      // Continue with new random movement after this one completes
+      setTimeout(() => {
+        moveGhostRandomly(ghost, container);
+      }, duration);
+    }
+
+    function movePacmanRandomly(pacman, container) {
+      const maxX = container.clientWidth - pacman.clientWidth;
+      const maxY = container.clientHeight - pacman.clientHeight;
+
+      // Get current position
+      const currentX = parseInt(pacman.style.left) || 50;
+      const currentY = parseInt(pacman.style.top) || 50;
+
+      // Generate new target position
+      const targetX = Math.random() * maxX;
+      const targetY = Math.random() * maxY;
+
+      // Calculate duration based on distance
+      const distance = Math.sqrt(Math.pow(targetX - currentX, 2) + Math.pow(targetY - currentY, 2));
+      const duration = distance * 15; // Pac-Man moves a bit faster than ghosts
+
+      // Determine direction for rotation
+      const angle = Math.atan2(targetY - currentY, targetX - currentX) * 180 / Math.PI;
+      pacman.style.transform = `rotate(${angle}deg)`;
+
+      // Animate movement
+      pacman.style.transition = `left ${duration}ms linear, top ${duration}ms linear`;
+      pacman.style.left = `${targetX}px`;
+      pacman.style.top = `${targetY}px`;
+
+      // Continue with new random movement after this one completes
+      setTimeout(() => {
+        movePacmanRandomly(pacman, container);
+      }, duration);
+    }
+  </script>
+</body>
+
+</html>Mog wizard gork</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
